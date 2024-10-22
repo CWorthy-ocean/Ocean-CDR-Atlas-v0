@@ -1,5 +1,0 @@
-dask-worker-space
-data
-**/__pycache__
-*.Log
-.ipynb_checkpoints

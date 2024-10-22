@@ -1,4 +1,0 @@
-Unloading the cpe module is insufficient to restore the system defaults.
-Please run 'source
-/opt/cray/pe/cpe/23.12/restore_lmod_system_defaults.[csh|sh]'. 
-Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /opt/cray/pe/lmod/modulefiles/mpi/gnu/12.0/ofi/1.0/cray-mpich/8.0

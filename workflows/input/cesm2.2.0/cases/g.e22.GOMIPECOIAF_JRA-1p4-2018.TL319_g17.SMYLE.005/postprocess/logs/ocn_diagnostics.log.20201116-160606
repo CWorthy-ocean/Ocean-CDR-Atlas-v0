@@ -1,1218 +1,0 @@
-6.6.2
-NCO netCDF Operators version 4.7.9 built by csgteam on cheyenne1 at Jun 27 2019 20:04:47
-ncks version 4.7.9
-User requested diagnostics:
-  MODEL_VS_OBS
-  MODEL_TIMESERIES
-  Checking prerequisites for : modelVsObs
-  Checking generic prerequisites for ocean diagnostics.
-working directory = /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-  Checking prerequisites for : modelTimeseries
-  Checking generic prerequisites for ocean diagnostics.
-working directory = /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES
-    model vs. obs - calling create_za
-Ocean zonal average command = /glade/p/cesm/postprocessing/ocn_diag/tool_lib/za -O -time_const -grid_file /glade/p/cesm//omwg/za_grids/gx1v7_grid_info.nc tavg.0347.0366.nc
-model_timeseries: setting up heat and freshwater awk calls with cplLogs = ['/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4994561.chadmin1.ib0.cheyenne.ucar.edu.201113-195106', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4792360.chadmin1.ib0.cheyenne.ucar.edu.201028-192725', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4759273.chadmin1.ib0.cheyenne.ucar.edu.201027-143210', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4885635.chadmin1.ib0.cheyenne.ucar.edu.201104-112819', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4768093.chadmin1.ib0.cheyenne.ucar.edu.201028-001541', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4894688.chadmin1.ib0.cheyenne.ucar.edu.201105-072408', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4840404.chadmin1.ib0.cheyenne.ucar.edu.201101-011650', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4806659.chadmin1.ib0.cheyenne.ucar.edu.201029-155642', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4899985.chadmin1.ib0.cheyenne.ucar.edu.201105-161541', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4844037.chadmin1.ib0.cheyenne.ucar.edu.201101-110520', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4828146.chadmin1.ib0.cheyenne.ucar.edu.201030-203546', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4891802.chadmin1.ib0.cheyenne.ucar.edu.201104-213755', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4997067.chadmin1.ib0.cheyenne.ucar.edu.201114-071821', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4863372.chadmin1.ib0.cheyenne.ucar.edu.201102-204246', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4771773.chadmin1.ib0.cheyenne.ucar.edu.201028-095720', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4819886.chadmin1.ib0.cheyenne.ucar.edu.201030-012930', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4835457.chadmin1.ib0.cheyenne.ucar.edu.201031-154232', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4854416.chadmin1.ib0.cheyenne.ucar.edu.201102-095929', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4831738.chadmin1.ib0.cheyenne.ucar.edu.201031-060400', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4871930.chadmin1.ib0.cheyenne.ucar.edu.201103-065438', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4824358.chadmin1.ib0.cheyenne.ucar.edu.201030-112321', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4848972.chadmin1.ib0.cheyenne.ucar.edu.201101-235124', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4882062.chadmin1.ib0.cheyenne.ucar.edu.201104-015429', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4877917.chadmin1.ib0.cheyenne.ucar.edu.201103-162453', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/cpl.log.4797586.chadmin1.ib0.cheyenne.ucar.edu.201029-053717']
-zonal average created
-model vs. obs - after scomm.sync requested_plots = ['PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_UOEQ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - User requested plot modules:
-  PM_POLARTS
-  PM_KAPPAZ
-  PM_PASSIVEZ
-  PM_WBC
-  PM_FLD3DZA
-  PM_TSZ
-  PM_VECV
-  PM_VELZ
-  PM_UOEQ
-  PM_SEAS
-  PM_REGIONALTS
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-  PM_BASINAVGTS
-  PM_FLD2D
-  PM_MLD
-  PM_SFC2D
-  PM_VELISOPZ
-  PM_MOC
-model vs. obs - Creating plot html header
-model vs. obs - after scomm.sync requested_plots = ['PM_UOEQ', 'PM_POLARTS', 'PM_KAPPAZ', 'PM_PASSIVEZ', 'PM_WBC', 'PM_FLD3DZA', 'PM_TSZ', 'PM_VECV', 'PM_VELZ', 'PM_SEAS', 'PM_REGIONALTS', 'PM_BASINAVGTS', 'PM_FLD2D', 'PM_MLD', 'PM_SFC2D', 'PM_VELISOPZ', 'PM_MOC']
-model vs. obs - Rendering plot html header
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Partition requested plots
-model vs. obs - Checking prerequisite for PassiveTracersDepth_obs on rank 2
-model vs. obs - Checking prerequisite for WesternBoundary_obs on rank 3
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for PolarTempSalt_obs on rank 0
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for DiffusionDepth_obs on rank 1
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for EulerianVelocity_obs on rank 7
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for ZonalAverage3dFields_obs on rank 4
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for TempSaltDepth_obs on rank 5
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Checking prerequisite for HorizontalVectorFields_obs on rank 6
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : PolarTempSalt_obs
-model vs. obs - Generating plots for PolarTempSalt_obs on rank 0
-  Checking prerequisites for : DiffusionDepth_obs
-model vs. obs - Generating plots for DiffusionDepth_obs on rank 1
-  Generating diagnostic plots for : DiffusionDepth_obs
-  Generating diagnostic plots for : PolarTempSalt_obs
-  Checking prerequisites for : PassiveTracersDepth_obs
-model vs. obs - Generating plots for PassiveTracersDepth_obs on rank 2
-  Generating diagnostic plots for : PassiveTracersDepth_obs
-  Checking prerequisites for : WesternBoundary_obs
-model vs. obs - Generating plots for WesternBoundary_obs on rank 3
-  Generating diagnostic plots for : WesternBoundary_obs
-  Checking prerequisites for : ZonalAverage3dFields_obs
-  Checking prerequisites for : EulerianVelocity_obs
-model vs. obs - Generating plots for EulerianVelocity_obs on rank 7
-  Generating diagnostic plots for : EulerianVelocity_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/uvelz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBSCalling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz_arctic.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/kappa_isopz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/iagez.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/dwbc.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-  Checking prerequisites for : TempSaltDepth_obs
-model vs. obs - Generating plots for TempSaltDepth_obs on rank 5
-  Generating diagnostic plots for : TempSaltDepth_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-  Checking prerequisites for : HorizontalVectorFields_obs
-model vs. obs - Generating plots for HorizontalVectorFields_obs on rank 6
-  Generating diagnostic plots for : HorizontalVectorFields_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/vecvelz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/dwbc.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting DWBC
-
-model vs. obs - Converting plots for WesternBoundary_obs on rank 3
-model vs. obs - Checking prerequisite for BasinAverages_obs on rank 3
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : BasinAverages_obs
-model vs. obs - Generating plots for BasinAverages_obs on rank 3
-  Generating diagnostic plots for : BasinAverages_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/TS_basinavg_arctic.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-model vs. obs - Generating plots for ZonalAverage3dFields_obs on rank 4
-  Generating diagnostic plots for : ZonalAverage3dFields_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_3d_za.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-model_timeseries: globalDiagAwkCmd = ['/glade/p/cesm/postprocessing/ocn_diag/tool_lib/process_pop2_logfiles.globaldiag.awk', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4759273.chadmin1.ib0.cheyenne.ucar.edu.201027-143210', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4768093.chadmin1.ib0.cheyenne.ucar.edu.201028-001541', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4771773.chadmin1.ib0.cheyenne.ucar.edu.201028-095720', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4792360.chadmin1.ib0.cheyenne.ucar.edu.201028-192725', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4797586.chadmin1.ib0.cheyenne.ucar.edu.201029-053717', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4806659.chadmin1.ib0.cheyenne.ucar.edu.201029-155642', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4819886.chadmin1.ib0.cheyenne.ucar.edu.201030-012930', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4824358.chadmin1.ib0.cheyenne.ucar.edu.201030-112321', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4828146.chadmin1.ib0.cheyenne.ucar.edu.201030-203546', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4831738.chadmin1.ib0.cheyenne.ucar.edu.201031-060400', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4835457.chadmin1.ib0.cheyenne.ucar.edu.201031-154232', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4840404.chadmin1.ib0.cheyenne.ucar.edu.201101-011650', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4844037.chadmin1.ib0.cheyenne.ucar.edu.201101-110520', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4848972.chadmin1.ib0.cheyenne.ucar.edu.201101-235124', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4854416.chadmin1.ib0.cheyenne.ucar.edu.201102-095929', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4863372.chadmin1.ib0.cheyenne.ucar.edu.201102-204246', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4871930.chadmin1.ib0.cheyenne.ucar.edu.201103-065438', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4877917.chadmin1.ib0.cheyenne.ucar.edu.201103-162453', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4882062.chadmin1.ib0.cheyenne.ucar.edu.201104-015429', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4885635.chadmin1.ib0.cheyenne.ucar.edu.201104-112819', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4891802.chadmin1.ib0.cheyenne.ucar.edu.201104-213755', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4894688.chadmin1.ib0.cheyenne.ucar.edu.201105-072408', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4899985.chadmin1.ib0.cheyenne.ucar.edu.201105-161541', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4994561.chadmin1.ib0.cheyenne.ucar.edu.201113-195106', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES/ocn.log.4997067.chadmin1.ib0.cheyenne.ucar.edu.201114-071821']
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/TS_basinavg_arctic.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting basin-average TEMP/SALT vs. depth for Arctic
-
-model vs. obs - Converting plots for BasinAverages_obs on rank 3
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/iagez.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting IAGE at 13 depth levels
-warning:ContourPlotInitialize: scalar field is constant; no contour lines will appear; use cnConstFEnableFill to enable fill
-warning:ContourPlotSetValues: Data values out of range of levels set by EXPLICITLEVELS mode
-
-model vs. obs - Converting plots for PassiveTracersDepth_obs on rank 2
-model vs. obs - Checking prerequisite for RegionalArea_obs on rank 2
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : RegionalArea_obs
-model vs. obs - Generating plots for RegionalArea_obs on rank 2
-  Generating diagnostic plots for : RegionalArea_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalTbias500m.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_3d_za.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 the number of fields to be processed is 5
-(0)	 plotting zonal average of SALT
-warning:lbPerimOn is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in SALT_SOU_za_contour.PlotManager at this time
-(0)	 plotting zonal average of TEMP
-warning:lbPerimOn is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in TEMP_SOU_za_contour.PlotManager at this time
-(0)	 plotting zonal average of IAGE
-warning:lbPerimOn is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in IAGE_SOU_za_contour.PlotManager at this time
-(0)	 plotting zonal average of KAPPA_ISOP
-warning:lbPerimOn is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_ISOP_SOU_za_contour.PlotManager at this time
-(0)	 plotting zonal average of KAPPA_THIC
-warning:lbPerimOn is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_GLO_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_ATL_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_PAC_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_IND_za_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in KAPPA_THIC_SOU_za_contour.PlotManager at this time
-
-model vs. obs - Converting plots for ZonalAverage3dFields_obs on rank 4
-model vs. obs - Checking prerequisite for SurfaceFields_obs on rank 4
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : SurfaceFields_obs
-model vs. obs - Generating plots for SurfaceFields_obs on rank 4
-  Generating diagnostic plots for : SurfaceFields_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/ssh.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz_arctic.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting Arctic TEMP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz_arctic.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/uvelz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting UVEL at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/vvelz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/ssh.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting ..... SSH
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_2d.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/kappa_isopz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting KAPPA_ISOP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/kappa_thicz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/vecvelz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting VELOCITY vectors at 13 depth levels
-
-model vs. obs - Converting plots for HorizontalVectorFields_obs on rank 6
-model vs. obs - Checking prerequisite for SurfaceFluxFields_obs on rank 6
-  Checking prerequisites for : SurfaceFluxFields_obs
-  Checking generic prerequisites for ocean diagnostics plot.
-model vs. obs - Generating plots for SurfaceFluxFields_obs on rank 6
-  Generating diagnostic plots for : SurfaceFluxFields_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sfcflx.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalTbias500m.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 computing regional upperocean TEMP biases,0 to 500 m
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalSbias500m.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz_arctic.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting Arctic SALINITY at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz_antarctic.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/vvelz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting VVEL at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/wvelz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_2d.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 the number of fields to be processed is 8
-(0)	 plotting ..... INT_DEPTH
-(0)	 plotting ..... TLT
-(0)	 plotting ..... DIA_DEPTH
-(0)	 plotting ..... BSF
-(0)	 plotting ..... SV
-(0)	 plotting ..... SU
-(0)	 plotting ..... HBLT
-(0)	 plotting ..... HMXL
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_2d_za.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/field_2d_za.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 the number of fields to be processed is 6
-(0)	 plotting zonal average of SSH
-(0)	 plotting zonal average of HBLT
-(0)	 plotting zonal average of HMXL
-(0)	 plotting zonal average of DIA_DEPTH
-(0)	 plotting zonal average of TLT
-(0)	 plotting zonal average of INT_DEPTH
-
-model vs. obs - Converting plots for SurfaceFields_obs on rank 4
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting TEMP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalSbias500m.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 computing regional upperocean SALT biases,0 to 500 m
-(0)	DEBUG: regionalSbias500m file_netcdf = tavg.0347.0366.nc
-(0)	DEBUG: regionalSbias500m.ncl file_S_obs = PHC2_SALT_gx1v7_60lev_ann_avg.nc
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalTbias2000m.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/kappa_thicz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting KAPPA_THIC at 13 depth levels
-
-model vs. obs - Converting plots for DiffusionDepth_obs on rank 1
-model vs. obs - Checking prerequisite for SeasonalCycle_obs on rank 1
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : SeasonalCycle_obs
-model vs. obs - Generating plots for SeasonalCycle_obs on rank 1
-  Generating diagnostic plots for : SeasonalCycle_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sst_eq_pac_seasonal_cycle.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalTbias2000m.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 computing regional upperocean TEMP biases,500 to 2000 m
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalSbias2000m.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sst_eq_pac_seasonal_cycle.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting equatorial pacific seasonal cycle SST
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-
-model vs. obs - Converting plots for SeasonalCycle_obs on rank 1
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/wvelz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting WVEL at 13 depth levels
-
-model vs. obs - Converting plots for EulerianVelocity_obs on rank 7
-model vs. obs - Checking prerequisite for BolusVelocity_obs on rank 7
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : BolusVelocity_obs
-model vs. obs - Generating plots for BolusVelocity_obs on rank 7
-  Generating diagnostic plots for : BolusVelocity_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/uisopz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/tempz_antarctic.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting Antarctic TEMP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz_antarctic.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/regionalSbias2000m.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 computing regional upperocean SALT biases,500 to 2000 m
-
-model vs. obs - Converting plots for RegionalArea_obs on rank 2
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz_antarctic.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting Antarctic SALINITY at 13 depth levels
-
-model vs. obs - Converting plots for PolarTempSalt_obs on rank 0
-model vs. obs - Checking prerequisite for EquatorialUpperocean_obs on rank 0
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : EquatorialUpperocean_obs
-model vs. obs - Generating plots for EquatorialUpperocean_obs on rank 0
-  Generating diagnostic plots for : EquatorialUpperocean_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/T_eq.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/T_eq.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	True
-(0)	False
-(0)	plotting equatorial TEMP
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/S_eq.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/S_eq.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	True
-(0)	False
-(0)	plotting equatorial SALT
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/U_eq.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/uisopz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting UISOP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/visopz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/U_eq.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	True
-(0)	False
-(0)	plotting equatorial Pacific UVEL
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-(0)	plotting equatorial Atlantic UVEL
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-(0)	plotting equatorial Indian UVEL
-warning:ScalarFieldSetValues: irregular coordinate array sfXArray non-monotonic: defaulting sfXArray
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/U_eq_meridional.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sfcflx.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	resolution = gx1v7
-(0)	 the number of fields to be processed is 19
-(0)	 plotting ..... SHF
-(0)	 plotting ..... SHF_TOTAL
-(0)	 plotting ..... SHF_QSW
-(0)	 plotting ..... MELTH_F
-(0)	 plotting ..... SENH_F
-(0)	 plotting ..... LWUP_F
-(0)	 plotting ..... LWDN_F
-(0)	 plotting ..... EVAP_F
-(0)	 plotting ..... SFWF
-(0)	 plotting ..... SFWF_TOTAL
-(0)	 plotting ..... PREC_F
-(0)	 plotting ..... MELT_F
-(0)	 plotting ..... ROFF_F
-(0)	 plotting ..... SALT_F
-(0)	 plotting ..... TAUX
-(0)	 plotting ..... TAUY
-(0)	 plotting ..... CURL
-(0)	 plotting ..... QFLUX
-(0)	 plotting ..... SNOW_F
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sfcflx_za.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/sfcflx_za.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	*** file_netcdf_za = za_tavg.0347.0366.nc
-(0)	*** file_flux_obs_za = za_a.b27.03.mean.1984-2006.nc
-(0)	*** file_wind_obs_za = za_gx1v3.022.clim.2000-2004.nc
-(0)	*** varsinfile = lat_t
-(1)	*** varsinfile = lat_t_edges
-(2)	*** varsinfile = ANGLET
-(3)	*** varsinfile = DYT
-(4)	*** varsinfile = HT
-(5)	*** varsinfile = HTE
-(6)	*** varsinfile = DXT
-(7)	*** varsinfile = HTN
-(8)	*** varsinfile = TAREA
-(9)	*** varsinfile = time
-(10)	*** varsinfile = MELTH_F
-(11)	*** varsinfile = LWDN_F
-(12)	*** varsinfile = TLT
-(13)	*** varsinfile = SSH
-(14)	*** varsinfile = ROFF_F
-(15)	*** varsinfile = z_t
-(16)	*** varsinfile = KAPPA_ISOP
-(17)	*** varsinfile = INT_DEPTH
-(18)	*** varsinfile = PREC_F
-(19)	*** varsinfile = KAPPA_THIC
-(20)	*** varsinfile = QFLUX
-(21)	*** varsinfile = HBLT
-(22)	*** varsinfile = MELT_F
-(23)	*** varsinfile = SFWF
-(24)	*** varsinfile = PD
-(25)	*** varsinfile = z_w_top
-(26)	*** varsinfile = WISOP
-(27)	*** varsinfile = SHF_QSW
-(28)	*** varsinfile = SALT
-(29)	*** varsinfile = DIA_DEPTH
-(30)	*** varsinfile = EVAP_F
-(31)	*** varsinfile = IAGE
-(32)	*** varsinfile = HMXL
-(33)	*** varsinfile = TEMP
-(34)	*** varsinfile = SENH_F
-(35)	*** varsinfile = SNOW_F
-(36)	*** varsinfile = SALT_F
-(37)	*** varsinfile = SHF
-(38)	*** varsinfile = LWUP_F
-(39)	*** varsinfile = WVEL
-(0)	 the number of fields to be processed is 14
-(0)	obs_prefix = x2oavg_Foxx_
-(0)	 processing zonal average of SHF
-(0)	obsvar x2oavg_Foxx_nethflx
-(0)	*** computing SHF_TOTAL
-(0)	 plotting zonal average of SHF
-(0)	*** plot with obsvar = x2oavg_Foxx_nethflx
-(0)	 processing zonal average of SHF_QSW
-(0)	obsvar x2oavg_Foxx_swnet
-(0)	 plotting zonal average of SHF_QSW
-(0)	*** plot with obsvar = x2oavg_Foxx_swnet
-(0)	 processing zonal average of SFWF
-(0)	obsvar x2oavg_Foxx_netfwflx
-(0)	*** computing SFWF_TOTAL
-(0)	 plotting zonal average of SFWF
-(0)	*** plot with obsvar = x2oavg_Foxx_netfwflx
-(0)	 processing zonal average of PREC_F
-(0)	obsvar x2oavg_Foxx_rain
-(0)	 plotting zonal average of PREC_F
-(0)	*** plot with obsvar = x2oavg_Foxx_rain
-(0)	 processing zonal average of EVAP_F
-(0)	obsvar x2oavg_Foxx_evap
-(0)	 plotting zonal average of EVAP_F
-(0)	*** plot with obsvar = x2oavg_Foxx_evap
-(0)	 processing zonal average of MELT_F
-(0)	obsvar x2oavg_Foxx_meltw
-(0)	 plotting zonal average of MELT_F
-(0)	*** plot with obsvar = x2oavg_Foxx_meltw
-(0)	 processing zonal average of ROFF_F
-(0)	ROFF_F obsvar = x2oavg_Forr_roff
-(0)	obsvar x2oavg_Forr_roff
-(0)	 plotting zonal average of ROFF_F
-(0)	*** plot with obsvar = x2oavg_Forr_roff
-(0)	 processing zonal average of SALT_F
-(0)	No observations of SALT_F
-(0)	obsvar 
-(0)	 plotting zonal average of SALT_F
-(0)	*** plot with obsvar is null
-(0)	 processing zonal average of SENH_F
-(0)	obsvar x2oavg_Foxx_sen
-(0)	 plotting zonal average of SENH_F
-(0)	*** plot with obsvar = x2oavg_Foxx_sen
-(0)	 processing zonal average of LWUP_F
-(0)	obsvar x2oavg_Foxx_lwup
-(0)	 plotting zonal average of LWUP_F
-(0)	*** plot with obsvar = x2oavg_Foxx_lwup
-(0)	 processing zonal average of LWDN_F
-(0)	obsvar x2oavg_Foxx_lwdn
-(0)	 plotting zonal average of LWDN_F
-(0)	*** plot with obsvar = x2oavg_Foxx_lwdn
-(0)	 processing zonal average of MELTH_F
-(0)	obsvar x2oavg_Foxx_melth
-(0)	 plotting zonal average of MELTH_F
-(0)	*** plot with obsvar = x2oavg_Foxx_melth
-(0)	 processing zonal average of QFLUX
-(0)	No observations of QFLUX
-(0)	obsvar 
-(0)	 plotting zonal average of QFLUX
-(0)	*** plot with obsvar is null
-(0)	 processing zonal average of SNOW_F
-(0)	obsvar x2oavg_Foxx_snow
-(0)	 plotting zonal average of SNOW_F
-(0)	*** plot with obsvar = x2oavg_Foxx_snow
-
-model vs. obs - Converting plots for SurfaceFluxFields_obs on rank 6
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/saltz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting SALINITY at 13 depth levels
-
-model vs. obs - Converting plots for TempSaltDepth_obs on rank 5
-model vs. obs - Checking prerequisite for MixedLayerDepth_obs on rank 5
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : MixedLayerDepth_obs
-model vs. obs - Generating plots for MixedLayerDepth_obs on rank 5
-  Generating diagnostic plots for : MixedLayerDepth_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/compute_rho.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/U_eq_meridional.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting equatorial UVEL at 143E
-(0)	plotting equatorial UVEL at 156E
-(0)	plotting equatorial UVEL at 165E
-(0)	plotting equatorial UVEL at 180E
-(0)	plotting equatorial UVEL at 190E
-(0)	plotting equatorial UVEL at 205E
-(0)	plotting equatorial UVEL at 220E
-(0)	plotting equatorial UVEL at 235E
-(0)	plotting equatorial UVEL at 250E
-(0)	plotting equatorial UVEL at 265E
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/S_eq_meridional.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/S_eq_meridional.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting equatorial SALT at 143E
-(0)	plotting equatorial SALT at 156E
-(0)	plotting equatorial SALT at 165E
-(0)	plotting equatorial SALT at 180E
-(0)	plotting equatorial SALT at 190E
-(0)	plotting equatorial SALT at 205E
-(0)	plotting equatorial SALT at 220E
-(0)	plotting equatorial SALT at 235E
-(0)	plotting equatorial SALT at 250E
-(0)	plotting equatorial SALT at 265E
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/T_eq_meridional.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/visopz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting VISOP at 13 depth levels
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/wisopz.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/T_eq_meridional.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting equatorial TEMP at 143E
-(0)	plotting equatorial TEMP at 156E
-(0)	plotting equatorial TEMP at 165E
-(0)	plotting equatorial TEMP at 180E
-(0)	plotting equatorial TEMP at 190E
-(0)	plotting equatorial TEMP at 205E
-(0)	plotting equatorial TEMP at 220E
-(0)	plotting equatorial TEMP at 235E
-(0)	plotting equatorial TEMP at 250E
-(0)	plotting equatorial TEMP at 265E
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/PD_eq_meridional.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/PD_eq_meridional.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting equatorial PD at 143E
-(0)	plotting equatorial PD at 156E
-(0)	plotting equatorial PD at 165E
-(0)	plotting equatorial PD at 180E
-(0)	plotting equatorial PD at 190E
-(0)	plotting equatorial PD at 205E
-(0)	plotting equatorial PD at 220E
-(0)	plotting equatorial PD at 235E
-(0)	plotting equatorial PD at 250E
-(0)	plotting equatorial PD at 265E
-
-model vs. obs - Converting plots for EquatorialUpperocean_obs on rank 0
-model vs. obs - Checking prerequisite for MOCFields_obs on rank 0
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : MOCFields_obs
-model vs. obs - Generating plots for MOCFields_obs on rank 0
-  Generating diagnostic plots for : MOCFields_obs
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/moc_netcdf.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/moc_netcdf.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting eulerian-mean MOC
-warning:lbPerimOn is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_contour.PlotManager at this time
-(0)	plotting eddy-induced MOC
-warning:lbPerimOn is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_EI_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_EI_contour.PlotManager at this time
-(0)	plotting total MOC
-warning:lbPerimOn is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbPerimOn is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbLabelFontHeightF is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbAutoManage is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-warning:lbLabelAutoStride is not a valid resource in MOC_TOTAL_contour.PlotManager at this time
-(0)	plotting N. heat transport
-(0)	plotting N. freshwater transport
-
-model vs. obs - Converting plots for MOCFields_obs on rank 0
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/wisopz.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting WISOP at 13 depth levels
-warning:ContourPlotInitialize: scalar field is constant; no contour lines will appear; use cnConstFEnableFill to enable fill
-
-model vs. obs - Converting plots for BolusVelocity_obs on rank 7
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/compute_rho.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	compute_rho.ncl file_T = mavg.0347.0366.nc
-(0)	compute_rho.ncl file_S = mavg.0347.0366.nc
-(0)	compute_rho.ncl file_out = g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.h.RHO.mavg_347-366.nc
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/mld.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_VS_OBS
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/mld.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	mld file_obs = PHC2_RHO0_gx1v7.nc
-(0)	mld file_netcdf = g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.h.RHO.mavg_347-366.nc
-(0)	mld file_tavg = tavg.0347.0366.nc
-warning:NetOpenFile: MissingToFillValue option set True, but missing_value attribute and data variable (PD) types differ: not adding virtual _FillValue attribute
-(0)	plotting mixed layer depth at 0.125
-(0)	plotting mixed layer depth at 0.03
-
-model vs. obs - Converting plots for MixedLayerDepth_obs on rank 5
-calling get_html for plot = PM_SFC2D
-calling get_html for plot = PM_FLD2D
-calling get_html for plot = PM_FLD3DZA
-calling get_html for plot = PM_MOC
-calling get_html for plot = PM_WBC
-calling get_html for plot = PM_SEAS
-calling get_html for plot = PM_MLD
-calling get_html for plot = PM_TSZ
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'TEMP:'), (1, '0m', 'TEMP0.png'), (2, '50m', 'TEMP50.png'), (3, '100m', 'TEMP100.png'), (4, '200m', 'TEMP200.png'), (5, '300m', 'TEMP300.png'), (6, '500m', 'TEMP500.png'), (7, '1000m', 'TEMP1000.png'), (8, '1500m', 'TEMP1500.png'), (9, '2000m', 'TEMP2000.png'), (10, '2500m', 'TEMP2500.png'), (11, '3000m', 'TEMP3000.png'), (12, '3500m', 'TEMP3500.png'), (13, '4000m', 'TEMP4000.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'SALT:'), (1, '0m', 'SALT0.png'), (2, '50m', 'SALT50.png'), (3, '100m', 'SALT100.png'), (4, '200m', 'SALT200.png'), (5, '300m', 'SALT300.png'), (6, '500m', 'SALT500.png'), (7, '1000m', 'SALT1000.png'), (8, '1500m', 'SALT1500.png'), (9, '2000m', 'SALT2000.png'), (10, '2500m', 'SALT2500.png'), (11, '3000m', 'SALT3000.png'), (12, '3500m', 'SALT3500.png'), (13, '4000m', 'SALT4000.png')]
-calling get_html for plot = PM_PASSIVEZ
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'IAGE:'), (1, '0m', 'IAGE0.png'), (2, '50m', 'IAGE50.png'), (3, '100m', 'IAGE100.png'), (4, '200m', 'IAGE200.png'), (5, '300m', 'IAGE300.png'), (6, '500m', 'IAGE500.png'), (7, '1000m', 'IAGE1000.png'), (8, '1500m', 'IAGE1500.png'), (9, '2000m', 'IAGE2000.png'), (10, '2500m', 'IAGE2500.png'), (11, '3000m', 'IAGE3000.png'), (12, '3500m', 'IAGE3500.png'), (13, '4000m', 'IAGE4000.png')]
-calling get_html for plot = PM_VELZ
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'UVEL:'), (1, '0m', 'UVEL0.png'), (2, '50m', 'UVEL50.png'), (3, '100m', 'UVEL100.png'), (4, '200m', 'UVEL200.png'), (5, '300m', 'UVEL300.png'), (6, '500m', 'UVEL500.png'), (7, '1000m', 'UVEL1000.png'), (8, '1500m', 'UVEL1500.png'), (9, '2000m', 'UVEL2000.png'), (10, '2500m', 'UVEL2500.png'), (11, '3000m', 'UVEL3000.png'), (12, '3500m', 'UVEL3500.png'), (13, '4000m', 'UVEL4000.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'VVEL:'), (1, '0m', 'VVEL0.png'), (2, '50m', 'VVEL50.png'), (3, '100m', 'VVEL100.png'), (4, '200m', 'VVEL200.png'), (5, '300m', 'VVEL300.png'), (6, '500m', 'VVEL500.png'), (7, '1000m', 'VVEL1000.png'), (8, '1500m', 'VVEL1500.png'), (9, '2000m', 'VVEL2000.png'), (10, '2500m', 'VVEL2500.png'), (11, '3000m', 'VVEL3000.png'), (12, '3500m', 'VVEL3500.png'), (13, '4000m', 'VVEL4000.png')]
-DEBUG... plot_tuple_list[2] = [(0, 'label', 'WVEL:'), (1, '0m', 'WVEL0.png'), (2, '50m', 'WVEL50.png'), (3, '100m', 'WVEL100.png'), (4, '200m', 'WVEL200.png'), (5, '300m', 'WVEL300.png'), (6, '500m', 'WVEL500.png'), (7, '1000m', 'WVEL1000.png'), (8, '1500m', 'WVEL1500.png'), (9, '2000m', 'WVEL2000.png'), (10, '2500m', 'WVEL2500.png'), (11, '3000m', 'WVEL3000.png'), (12, '3500m', 'WVEL3500.png'), (13, '4000m', 'WVEL4000.png')]
-calling get_html for plot = PM_VELISOPZ
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'UISOP:'), (1, '0m', 'UISOP0.png'), (2, '50m', 'UISOP50.png'), (3, '100m', 'UISOP100.png'), (4, '200m', 'UISOP200.png'), (5, '300m', 'UISOP300.png'), (6, '500m', 'UISOP500.png'), (7, '1000m', 'UISOP1000.png'), (8, '1500m', 'UISOP1500.png'), (9, '2000m', 'UISOP2000.png'), (10, '2500m', 'UISOP2500.png'), (11, '3000m', 'UISOP3000.png'), (12, '3500m', 'UISOP3500.png'), (13, '4000m', 'UISOP4000.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'VISOP:'), (1, '0m', 'VISOP0.png'), (2, '50m', 'VISOP50.png'), (3, '100m', 'VISOP100.png'), (4, '200m', 'VISOP200.png'), (5, '300m', 'VISOP300.png'), (6, '500m', 'VISOP500.png'), (7, '1000m', 'VISOP1000.png'), (8, '1500m', 'VISOP1500.png'), (9, '2000m', 'VISOP2000.png'), (10, '2500m', 'VISOP2500.png'), (11, '3000m', 'VISOP3000.png'), (12, '3500m', 'VISOP3500.png'), (13, '4000m', 'VISOP4000.png')]
-DEBUG... plot_tuple_list[2] = [(0, 'label', 'WISOP:'), (1, '0m', 'WISOP0.png'), (2, '50m', 'WISOP50.png'), (3, '100m', 'WISOP100.png'), (4, '200m', 'WISOP200.png'), (5, '300m', 'WISOP300.png'), (6, '500m', 'WISOP500.png'), (7, '1000m', 'WISOP1000.png'), (8, '1500m', 'WISOP1500.png'), (9, '2000m', 'WISOP2000.png'), (10, '2500m', 'WISOP2500.png'), (11, '3000m', 'WISOP3000.png'), (12, '3500m', 'WISOP3500.png'), (13, '4000m', 'WISOP4000.png')]
-calling get_html for plot = PM_KAPPAZ
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'KAPPA_ISOP:'), (1, '0m', 'KAPPA_ISOP0.png'), (2, '50m', 'KAPPA_ISOP50.png'), (3, '100m', 'KAPPA_ISOP100.png'), (4, '200m', 'KAPPA_ISOP200.png'), (5, '300m', 'KAPPA_ISOP300.png'), (6, '500m', 'KAPPA_ISOP500.png'), (7, '1000m', 'KAPPA_ISOP1000.png'), (8, '1500m', 'KAPPA_ISOP1500.png'), (9, '2000m', 'KAPPA_ISOP2000.png'), (10, '2500m', 'KAPPA_ISOP2500.png'), (11, '3000m', 'KAPPA_ISOP3000.png'), (12, '3500m', 'KAPPA_ISOP3500.png'), (13, '4000m', 'KAPPA_ISOP4000.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'KAPPA_THIC:'), (1, '0m', 'KAPPA_THIC0.png'), (2, '50m', 'KAPPA_THIC50.png'), (3, '100m', 'KAPPA_THIC100.png'), (4, '200m', 'KAPPA_THIC200.png'), (5, '300m', 'KAPPA_THIC300.png'), (6, '500m', 'KAPPA_THIC500.png'), (7, '1000m', 'KAPPA_THIC1000.png'), (8, '1500m', 'KAPPA_THIC1500.png'), (9, '2000m', 'KAPPA_THIC2000.png'), (10, '2500m', 'KAPPA_THIC2500.png'), (11, '3000m', 'KAPPA_THIC3000.png'), (12, '3500m', 'KAPPA_THIC3500.png'), (13, '4000m', 'KAPPA_THIC4000.png')]
-calling get_html for plot = PM_UOEQ
-DEBUG... plot_tuple_list = [(0, 'TEMP (Glo)', 'T_EQ.png'), (1, 'SALT (Glo)', 'S_EQ.png'), (2, 'UVEL (Pac)', 'U_EQ_PAC.png'), (3, 'UVEL (Atl)', 'U_EQ_ATL.png'), (4, 'UVEL (Ind)', 'U_EQ_IND.png')]
-DEBUG... plot_tuple_list[0] = [(0, 'label', '143&deg;E:'), (1, 'TEMP', 'T_143E.png'), (2, 'SALT', 'S_143E.png'), (3, 'PD', 'PD_143E.png'), (4, 'UVEL', 'U_143E.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', '156&deg;E:'), (1, 'TEMP', 'T_156E.png'), (2, 'SALT', 'S_156E.png'), (3, 'PD', 'PD_156E.png'), (4, 'UVEL', 'U_156E.png')]
-DEBUG... plot_tuple_list[2] = [(0, 'label', '165&deg;E:'), (1, 'TEMP', 'T_165E.png'), (2, 'SALT', 'S_165E.png'), (3, 'PD', 'PD_165E.png'), (4, 'UVEL', 'U_165E.png')]
-DEBUG... plot_tuple_list[3] = [(0, 'label', '180&deg;E:'), (1, 'TEMP', 'T_180E.png'), (2, 'SALT', 'S_180E.png'), (3, 'PD', 'PD_180E.png'), (4, 'UVEL', 'U_180E.png')]
-DEBUG... plot_tuple_list[4] = [(0, 'label', '190&deg;E:'), (1, 'TEMP', 'T_190E.png'), (2, 'SALT', 'S_190E.png'), (3, 'PD', 'PD_190E.png'), (4, 'UVEL', 'U_190E.png')]
-DEBUG... plot_tuple_list[5] = [(0, 'label', '205&deg;E:'), (1, 'TEMP', 'T_205E.png'), (2, 'SALT', 'S_205E.png'), (3, 'PD', 'PD_205E.png'), (4, 'UVEL', 'U_205E.png')]
-DEBUG... plot_tuple_list[6] = [(0, 'label', '220&deg;E:'), (1, 'TEMP', 'T_220E.png'), (2, 'SALT', 'S_220E.png'), (3, 'PD', 'PD_220E.png'), (4, 'UVEL', 'U_220E.png')]
-DEBUG... plot_tuple_list[7] = [(0, 'label', '235&deg;E:'), (1, 'TEMP', 'T_235E.png'), (2, 'SALT', 'S_235E.png'), (3, 'PD', 'PD_235E.png'), (4, 'UVEL', 'U_235E.png')]
-DEBUG... plot_tuple_list[8] = [(0, 'label', '250&deg;E:'), (1, 'TEMP', 'T_250E.png'), (2, 'SALT', 'S_250E.png'), (3, 'PD', 'PD_250E.png'), (4, 'UVEL', 'U_250E.png')]
-DEBUG... plot_tuple_list[9] = [(0, 'label', '265&deg;E:'), (1, 'TEMP', 'T_265E.png'), (2, 'SALT', 'S_265E.png'), (3, 'PD', 'PD_265E.png'), (4, 'UVEL', 'U_265E.png')]
-calling get_html for plot = PM_VECV
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'VELOCITY:'), (1, '0m', 'VELOCITY0.png'), (2, '50m', 'VELOCITY50.png'), (3, '100m', 'VELOCITY100.png'), (4, '200m', 'VELOCITY200.png'), (5, '300m', 'VELOCITY300.png'), (6, '500m', 'VELOCITY500.png'), (7, '1000m', 'VELOCITY1000.png'), (8, '1500m', 'VELOCITY1500.png'), (9, '2000m', 'VELOCITY2000.png'), (10, '2500m', 'VELOCITY2500.png'), (11, '3000m', 'VELOCITY3000.png'), (12, '3500m', 'VELOCITY3500.png'), (13, '4000m', 'VELOCITY4000.png')]
-calling get_html for plot = PM_POLARTS
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'Arctic_TEMP:'), (1, '0m', 'Arctic_TEMP0.png'), (2, '50m', 'Arctic_TEMP50.png'), (3, '100m', 'Arctic_TEMP100.png'), (4, '200m', 'Arctic_TEMP200.png'), (5, '300m', 'Arctic_TEMP300.png'), (6, '500m', 'Arctic_TEMP500.png'), (7, '1000m', 'Arctic_TEMP1000.png'), (8, '1500m', 'Arctic_TEMP1500.png'), (9, '2000m', 'Arctic_TEMP2000.png'), (10, '2500m', 'Arctic_TEMP2500.png'), (11, '3000m', 'Arctic_TEMP3000.png'), (12, '3500m', 'Arctic_TEMP3500.png'), (13, '4000m', 'Arctic_TEMP4000.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'Arctic_SALT:'), (1, '0m', 'Arctic_SALT0.png'), (2, '50m', 'Arctic_SALT50.png'), (3, '100m', 'Arctic_SALT100.png'), (4, '200m', 'Arctic_SALT200.png'), (5, '300m', 'Arctic_SALT300.png'), (6, '500m', 'Arctic_SALT500.png'), (7, '1000m', 'Arctic_SALT1000.png'), (8, '1500m', 'Arctic_SALT1500.png'), (9, '2000m', 'Arctic_SALT2000.png'), (10, '2500m', 'Arctic_SALT2500.png'), (11, '3000m', 'Arctic_SALT3000.png'), (12, '3500m', 'Arctic_SALT3500.png'), (13, '4000m', 'Arctic_SALT4000.png')]
-DEBUG... plot_tuple_list[2] = [(0, 'label', 'Antarctic_TEMP:'), (1, '0m', 'Antarctic_TEMP0.png'), (2, '50m', 'Antarctic_TEMP50.png'), (3, '100m', 'Antarctic_TEMP100.png'), (4, '200m', 'Antarctic_TEMP200.png'), (5, '300m', 'Antarctic_TEMP300.png'), (6, '500m', 'Antarctic_TEMP500.png'), (7, '1000m', 'Antarctic_TEMP1000.png'), (8, '1500m', 'Antarctic_TEMP1500.png'), (9, '2000m', 'Antarctic_TEMP2000.png'), (10, '2500m', 'Antarctic_TEMP2500.png'), (11, '3000m', 'Antarctic_TEMP3000.png'), (12, '3500m', 'Antarctic_TEMP3500.png'), (13, '4000m', 'Antarctic_TEMP4000.png')]
-DEBUG... plot_tuple_list[3] = [(0, 'label', 'Antarctic_SALT:'), (1, '0m', 'Antarctic_SALT0.png'), (2, '50m', 'Antarctic_SALT50.png'), (3, '100m', 'Antarctic_SALT100.png'), (4, '200m', 'Antarctic_SALT200.png'), (5, '300m', 'Antarctic_SALT300.png'), (6, '500m', 'Antarctic_SALT500.png'), (7, '1000m', 'Antarctic_SALT1000.png'), (8, '1500m', 'Antarctic_SALT1500.png'), (9, '2000m', 'Antarctic_SALT2000.png'), (10, '2500m', 'Antarctic_SALT2500.png'), (11, '3000m', 'Antarctic_SALT3000.png'), (12, '3500m', 'Antarctic_SALT3500.png'), (13, '4000m', 'Antarctic_SALT4000.png')]
-calling get_html for plot = PM_BASINAVGTS
-calling get_html for plot = PM_REGIONALTS
-DEBUG... plot_tuple_list[0] = [(0, 'label', '0-500m:'), (1, 'TEMP', 'regionalTbias.0-500.png'), (2, 'SALT', 'regionalSbias.0-500.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', '500-2000m:'), (1, 'TEMP', 'regionalTbias.500-2000.png'), (2, 'SALT', 'regionalSbias.500-2000.png')]
-Adding html for plot = PM_SFC2D
-Adding html for plot = PM_FLD2D
-Adding html for plot = PM_FLD3DZA
-Adding html for plot = PM_MOC
-Adding html for plot = PM_WBC
-Adding html for plot = PM_SEAS
-Adding html for plot = PM_MLD
-Adding html for plot = PM_TSZ
-Adding html for plot = PM_PASSIVEZ
-Adding html for plot = PM_VELZ
-Adding html for plot = PM_VELISOPZ
-Adding html for plot = PM_KAPPAZ
-Adding html for plot = PM_UOEQ
-Adding html for plot = PM_VECV
-Adding html for plot = PM_POLARTS
-Adding html for plot = PM_BASINAVGTS
-Adding html for plot = PM_REGIONALTS
-model vs. obs - Adding footer html
-model vs. obs - Writing plot index.html
-*******************************************************************************
-Successfully completed generating ocean diagnostics model vs. observation plots
-*******************************************************************************
-dtFiles = ['/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0168-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0107-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0306-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0031-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0290-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0001-01-01-03600', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0366-02-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0336-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0138-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0229-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0077-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0092-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0214-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0351-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0184-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0062-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0046-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0260-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0153-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0245-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0275-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0199-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0016-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0123-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0321-01-01-00000']
-model_timeseries: dtFilesAwkCmd = ['/glade/p/cesm/postprocessing/ocn_diag/tool_lib/process_pop2_dtfiles.awk', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0001-01-01-03600', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0016-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0031-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0046-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0062-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0077-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0092-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0107-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0123-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0138-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0153-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0168-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0184-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0199-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0214-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0229-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0245-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0260-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0275-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0290-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0306-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0321-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0336-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0351-01-01-00000', '/glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/hist/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.dt.0366-02-01-00000']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - User requested plot modules:
-  PM_YPOPLOG
-  PM_HORZMN
-  PM_MOCANN
-  PM_ENSOWVLT
-  PM_CPLLOG
-model timeseries - Creating plot html header
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - after scomm.sync requested_plots = ['PM_YPOPLOG', 'PM_HORZMN', 'PM_MOCANN', 'PM_ENSOWVLT', 'PM_CPLLOG']
-model timeseries - Rendering plot html header
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Partition requested plots
-model timeseries - Checking prerequisite for CplLog_timeseries on rank 4
-  Checking generic prerequisites for ocean diagnostics plot.
-model timeseries - Checking prerequisite for PopLog_timeseries on rank 0
-  Checking generic prerequisites for ocean diagnostics plot.
-model timeseries - Checking prerequisite for MOCAnnual_timeseries on rank 2
-  Checking generic prerequisites for ocean diagnostics plot.
-model timeseries - Checking prerequisite for RegionalMeanTS_timeseries on rank 1
-  Checking generic prerequisites for ocean diagnostics plot.
-model timeseries - Checking prerequisite for EnsoWavelet_timeseries on rank 3
-  Checking generic prerequisites for ocean diagnostics plot.
-  Checking prerequisites for : CplLog_timeseries
-  Checking prerequisites for : PopLog_timeseries
-  Checking prerequisites for : RegionalMeanTS_timeseries
-  Checking prerequisites for : MOCAnnual_timeseries
-  Checking prerequisites for : EnsoWavelet_timeseries
-model timeseries - Generating plots for EnsoWavelet_timeseries on rank 3
-  Generating diagnostic plots for : EnsoWavelet_timeseries
-model timeseries - Generating plots for CplLog_timeseries on rank 4
-  Generating diagnostic plots for : CplLog_timeseries
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/pop_log_diagts_nino.monthly.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES
-model timeseries - Generating plots for PopLog_timeseries on rank 0
-  Generating diagnostic plots for : PopLog_timeseries
-model timeseries - Generating plots for MOCAnnual_timeseries on rank 2
-  Generating diagnostic plots for : MOCAnnual_timeseries
-      calling NCL plot routine cpl7b_log_timeseries_heat.ncl
-      calling NCL plot routine moc_annual_timeseries.ncl
-model timeseries - Generating plots for RegionalMeanTS_timeseries on rank 1
-  Generating diagnostic plots for : RegionalMeanTS_timeseries
-      calling NCL plot routine TS_profiles_diff_plot.ncl
-      calling NCL plot routine pop_log_diagts_3d.monthly.ncl
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/pop_log_diagts_nino.monthly.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series NINO
-
-Calling NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/enso_wavelet_asc.ncl from /glade/scratch/klindsay/archive/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005/ocn/proc/diag_work.347-366/MODEL_TIMESERIES
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	 plotting heat bugdet
-      calling NCL plot routine cpl7b_log_timeseries_fw.ncl
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting fresh water budget
-model timeseries - Converting plots for CplLog_timeseries on rank 4
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series TEMP
-(0)	plotting time series SALT
-(0)	plotting time series RHO
-(0)	plotting time series IAGE
-(0)	plotting time series HBLT
-(0)	plotting time series HMXL
-(0)	plotting time series SSH
-      calling NCL plot routine pop_log_diagts_hflux.monthly.ncl
-NCL routine /glade/p/cesm/postprocessing/ocn_diag/ncl_lib/enso_wavelet_asc.ncl 
-  Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting ENSO nino3 analysis
-(0)	plotting ENSO nino3.4 analysis
-
-model timeseries - Converting plots for EnsoWavelet_timeseries on rank 3
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series SHF TOTAL
-(0)	plotting time series SW NET
-(0)	plotting time series LW NET
-(0)	plotting time series LWUP_F
-(0)	plotting time series LWDN_F
-(0)	plotting time series LATENT
-(0)	plotting time series SENH_F
-(0)	plotting time series MELTH_F
-(0)	plotting time series QFLUX
-      calling NCL plot routine pop_log_diagts_fwflux.monthly.ncl
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series total SFWF
-(0)	plotting time series EVAP_F
-(0)	plotting time series PREC_F
-(0)	plotting time series SNOW_F
-(0)	plotting time series MELT_F
-(0)	plotting time series ROFF_F
-(0)	plotting time series SALT_F
-(0)	plotting time series SFWF QFLUX
-      calling NCL plot routine pop_log_diagts_cfc.monthly.ncl
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting TEMP tracers for SOUTHERN BASIN
-(0)	plotting TEMP tracers for PACIFIC BASIN
-(0)	plotting TEMP tracers for INDIAN BASIN
-(0)	plotting TEMP tracers for ATLANTIC BASIN
-(0)	plotting TEMP tracers for LABRADOR BASIN
-(0)	plotting TEMP tracers for GIN BASIN
-warning:ContourPlotInitialize: scalar field is constant; no contour lines will appear; use cnConstFEnableFill to enable fill
-warning:ContourPlotSetValues: Data values out of range of levels set by EXPLICITLEVELS mode
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series CFC11
-(0)	plotting time series CFC12
-(0)	plotting time series STF CFC11
-(0)	plotting time series STF CFC12
-      calling NCL plot routine pop_log_diagts_transports.ncl
-(0)	plotting TEMP tracers for ARCTIC BASIN
-warning:ContourPlotInitialize: scalar field is constant; no contour lines will appear; use cnConstFEnableFill to enable fill
-warning:ContourPlotSetValues: Data values out of range of levels set by EXPLICITLEVELS mode
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series Drake Passage Transports
-(0)	plotting time series Mozambique Channel Transports
-(0)	plotting time series Bering Strait Transports
-(0)	plotting time series Northwest Passage Transports
-(0)	plotting time series Indonesian Throughflow I Transports
-(0)	plotting time series Indonesian Throughflow II Transports
-(0)	plotting time series Florida Strait Transports
-(0)	plotting time series Windward Passage I Transports
-(0)	plotting time series Windward Passage II Transports
-(0)	plotting time series Gibraltar Transports
-(0)	plotting time series Nares Strait Transports
-      calling NCL plot routine pop_log_diagts_nino.monthly.ncl
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series NINO
-      calling NCL plot routine pop_log_diagts_precf.ncl
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting time series PRECF
-model timeseries - Converting plots for PopLog_timeseries on rank 0
-(0)	plotting TEMP tracers for HUDSON BASIN
-(0)	plotting TEMP tracers for GLOBAL BASIN
-(0)	plotting SALT tracers for SOUTHERN BASIN
-(0)	plotting SALT tracers for PACIFIC BASIN
-(0)	plotting SALT tracers for INDIAN BASIN
-(0)	plotting SALT tracers for ATLANTIC BASIN
-(0)	plotting SALT tracers for LABRADOR BASIN
-(0)	plotting SALT tracers for GIN BASIN
-(0)	plotting SALT tracers for ARCTIC BASIN
-(0)	plotting SALT tracers for HUDSON BASIN
-(0)	plotting SALT tracers for GLOBAL BASIN
-model timeseries - Converting plots for RegionalMeanTS_timeseries on rank 1
- Copyright (C) 1995-2019 - All Rights Reserved
- University Corporation for Atmospheric Research
- NCAR Command Language Version 6.6.2
- The use of this software is governed by a License Agreement.
- See http://www.ncl.ucar.edu/ for more details.
-(0)	plotting moc annual time series
-model timeseries - Converting plots for MOCAnnual_timeseries on rank 2
-calling get_html for plot = PM_CPLLOG
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'Heat:'), (1, 'timeseries', 'cplheatbudget.png'), (1, 'table', 'cplheatbudget.txt')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'Freshwater:'), (2, 'timeseries', 'cplfwbudget.png'), (2, 'table', 'cplfwbudget.txt')]
-calling get_html for plot = PM_YPOPLOG
-calling get_html for plot = PM_HORZMN
-DEBUG... plot_tuple_list[0] = [(0, 'label', 'TEMP_diff:'), (1, 'Global', 'Glo_hor_mean_Tdiff_timeseries.png'), (2, 'Arctic', 'Arc_hor_mean_Tdiff_timeseries.png'), (3, 'Atlantic', 'Atl_hor_mean_Tdiff_timeseries.png'), (4, 'Gin', 'Gin_hor_mean_Tdiff_timeseries.png'), (5, 'Hudson', 'Hud_hor_mean_Tdiff_timeseries.png'), (6, 'Indian', 'Ind_hor_mean_Tdiff_timeseries.png'), (7, 'Labrador', 'Lab_hor_mean_Tdiff_timeseries.png'), (8, 'Pacific', 'Pac_hor_mean_Tdiff_timeseries.png'), (9, 'Southern', 'Sou_hor_mean_Tdiff_timeseries.png')]
-DEBUG... plot_tuple_list[1] = [(0, 'label', 'TEMP_rms:'), (1, 'Global', 'Glo_hor_mean_Trms_timeseries.png'), (2, 'Arctic', 'Arc_hor_mean_Trms_timeseries.png'), (3, 'Atlantic', 'Atl_hor_mean_Trms_timeseries.png'), (4, 'Gin', 'Gin_hor_mean_Trms_timeseries.png'), (5, 'Hudson', 'Hud_hor_mean_Trms_timeseries.png'), (6, 'Indian', 'Ind_hor_mean_Trms_timeseries.png'), (7, 'Labrador', 'Lab_hor_mean_Trms_timeseries.png'), (8, 'Pacific', 'Pac_hor_mean_Trms_timeseries.png'), (9, 'Southern', 'Sou_hor_mean_Trms_timeseries.png')]
-DEBUG... plot_tuple_list[2] = [(0, 'label', 'SALT_diff:'), (1, 'Global', 'Glo_hor_mean_Sdiff_timeseries.png'), (2, 'Arctic', 'Arc_hor_mean_Sdiff_timeseries.png'), (3, 'Atlantic', 'Atl_hor_mean_Sdiff_timeseries.png'), (4, 'Gin', 'Gin_hor_mean_Sdiff_timeseries.png'), (5, 'Hudson', 'Hud_hor_mean_Sdiff_timeseries.png'), (6, 'Indian', 'Ind_hor_mean_Sdiff_timeseries.png'), (7, 'Labrador', 'Lab_hor_mean_Sdiff_timeseries.png'), (8, 'Pacific', 'Pac_hor_mean_Sdiff_timeseries.png'), (9, 'Southern', 'Sou_hor_mean_Sdiff_timeseries.png')]
-DEBUG... plot_tuple_list[3] = [(0, 'label', 'SALT_rms:'), (1, 'Global', 'Glo_hor_mean_Srms_timeseries.png'), (2, 'Arctic', 'Arc_hor_mean_Srms_timeseries.png'), (3, 'Atlantic', 'Atl_hor_mean_Srms_timeseries.png'), (4, 'Gin', 'Gin_hor_mean_Srms_timeseries.png'), (5, 'Hudson', 'Hud_hor_mean_Srms_timeseries.png'), (6, 'Indian', 'Ind_hor_mean_Srms_timeseries.png'), (7, 'Labrador', 'Lab_hor_mean_Srms_timeseries.png'), (8, 'Pacific', 'Pac_hor_mean_Srms_timeseries.png'), (9, 'Southern', 'Sou_hor_mean_Srms_timeseries.png')]
-calling get_html for plot = PM_ENSOWVLT
-calling get_html for plot = PM_MOCANN
-Adding html for plot = PM_CPLLOG
-Adding html for plot = PM_YPOPLOG
-Adding html for plot = PM_HORZMN
-Adding html for plot = PM_ENSOWVLT
-Adding html for plot = PM_MOCANN
-Adding html for plot = CPLLOG
-Adding html for plot = POPLOG
-Adding html for plot = HORZMN
-Adding html for plot = ENSOWVLT
-Adding html for plot = MOCANN
-model timeseries - Adding footer html
-model timeseries - Writing plot index.html
-**************************************************************************
-Successfully completed generating ocean diagnostics model timeseries plots
-**************************************************************************
-***************************************************
-Run copy_html utility to copy web files and plots to a remote web server
-Total Time: 394.735883951 seconds
-Successfully completed generating ocean diagnostics
-***************************************************
