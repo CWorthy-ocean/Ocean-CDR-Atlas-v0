@@ -595,11 +595,6 @@ reservation hours: 147.64285714285714
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>shit.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,8 +606,8 @@ reservation hours: 147.64285714285714
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.05 s, sys: 628 ms, total: 1.68 s
-Wall time: 13.5 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.7 s, sys: 1.62 s, total: 3.32 s
+Wall time: 3min 58s
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -748,72 +743,72 @@ Wall time: 13.5 s
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>59.04</td>
+      <td>364.21</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>58.88</td>
+      <td>365.21</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>59.09</td>
+      <td>363.90</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>59.24</td>
+      <td>363.00</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>59.31</td>
+      <td>362.58</td>
     </tr>
   </tbody>
 </table>
@@ -834,12 +829,12 @@ Wall time: 13.5 s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span> <span class="c1"># 1980</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span> <span class="c1"># 2314</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1980
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2314
 </pre></div>
 </div>
 </div>
@@ -886,6 +881,18 @@ Wall time: 13.5 s
     <span class="n">CANCELLED</span> <span class="o">=</span> <span class="nb">any</span><span class="p">([</span><span class="s2">&quot;CANCELLED&quot;</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="s2">: CANCELLED: </span><span class="si">{</span><span class="n">CANCELLED</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">submitted</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>184
 </pre></div>
 </div>
 </div>
