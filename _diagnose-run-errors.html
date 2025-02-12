@@ -60,7 +60,7 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_scratch';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_diagnose-run-errors';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -252,7 +252,7 @@
       
       
       
-      <li><a href="_sources/_scratch.ipynb" target="_blank"
+      <li><a href="_sources/_diagnose-run-errors.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,57 +352,7 @@
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
-<span class="o">%</span><span class="k">autoreload</span> 2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">subprocess</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_output</span><span class="p">,</span> <span class="n">check_call</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">machine</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">atlas</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">config</span><span class="w"> </span><span class="kn">import</span> <span class="n">paths</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">njobs</span> <span class="o">=</span> <span class="mi">2067</span> <span class="c1"># jobs</span>
-
-<span class="n">nodes_per_job</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">hours_per_job</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="n">concurrent_jobs</span> <span class="o">=</span> <span class="mi">140</span>
-<span class="n">nodes_reserved</span> <span class="o">=</span> <span class="n">nodes_per_job</span> <span class="o">*</span> <span class="n">concurrent_jobs</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;reservation N nodes: </span><span class="si">{</span><span class="n">nodes_reserved</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;reservation hours: </span><span class="si">{</span><span class="n">njobs</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">concurrent_jobs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hours_per_job</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reservation N nodes: 980
-reservation hours: 147.64285714285714
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">building_cases</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">building_jobids</span><span class="p">()</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">building_cases</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">atlas</span>
 </pre></div>
 </div>
 </div>
@@ -422,17 +372,25 @@ reservation hours: 147.64285714285714
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">calc</span><span class="o">.</span><span class="n">_refresh_case_status</span><span class="p">()</span>        
-<span class="n">df</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">df_case_status</span>
+<span class="n">calc</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c402eba354eb4bbbae525fddd07ecff7", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 38 s, sys: 7.49 s, total: 45.5 s
+Wall time: 6min 17s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">df_validation</span>
 <span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.7 s, sys: 1.62 s, total: 3.32 s
-Wall time: 3min 58s
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -451,20 +409,40 @@ Wall time: 3min 58s
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>build</th>
-      <th>submitted</th>
-      <th>run_completed</th>
-      <th>archive</th>
-      <th>error</th>
-      <th>error_count</th>
-      <th>JobId</th>
-      <th>JobState</th>
-      <th>Queued</th>
-      <th>yr_per_day</th>
-      <th>pe-hr_per_yr</th>
+      <th>is_cdr_run</th>
+      <th>ALK_ALT_CO2_rmse</th>
+      <th>ALK_rmse</th>
+      <th>DIC_ALT_CO2_rmse</th>
+      <th>DIC_rmse</th>
+      <th>DOC_rmse</th>
+      <th>DOCr_rmse</th>
+      <th>DON_rmse</th>
+      <th>DONr_rmse</th>
+      <th>DOP_rmse</th>
+      <th>...</th>
+      <th>diazC_rmse</th>
+      <th>diazChl_rmse</th>
+      <th>diazFe_rmse</th>
+      <th>diazP_rmse</th>
+      <th>spC_rmse</th>
+      <th>spCaCO3_rmse</th>
+      <th>spChl_rmse</th>
+      <th>spFe_rmse</th>
+      <th>spP_rmse</th>
+      <th>zooC_rmse</th>
     </tr>
     <tr>
       <th>case</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -481,76 +459,136 @@ Wall time: 3min 58s
   <tbody>
     <tr>
       <th>smyle.cdr-atlas-v0.control.001</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
       <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>45.61</td>
-      <td>471.47</td>
+      <td>0.224847</td>
+      <td>0.224846</td>
+      <td>0.325688</td>
+      <td>0.304365</td>
+      <td>0.045923</td>
+      <td>0.011091</td>
+      <td>0.004066</td>
+      <td>0.000207</td>
+      <td>0.000238</td>
+      <td>...</td>
+      <td>0.000601</td>
+      <td>0.000147</td>
+      <td>4.014262e-08</td>
+      <td>0.000005</td>
+      <td>0.025289</td>
+      <td>0.005248</td>
+      <td>0.003786</td>
+      <td>6.857399e-07</td>
+      <td>0.000216</td>
+      <td>0.010324</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>58.82</td>
-      <td>365.62</td>
+      <td>0.230523</td>
+      <td>NaN</td>
+      <td>0.336078</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>59.00</td>
-      <td>364.49</td>
+      <td>0.270639</td>
+      <td>NaN</td>
+      <td>0.315976</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>58.89</td>
-      <td>365.17</td>
+      <td>0.225976</td>
+      <td>NaN</td>
+      <td>0.302304</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>58.94</td>
-      <td>364.83</td>
+      <td>0.288906</td>
+      <td>NaN</td>
+      <td>0.368662</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -566,156 +604,260 @@ Wall time: 3min 58s
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>59.04</td>
-      <td>364.21</td>
+      <td>0.260466</td>
+      <td>NaN</td>
+      <td>30.281244</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>58.88</td>
-      <td>365.21</td>
+      <td>0.283162</td>
+      <td>NaN</td>
+      <td>29.829412</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>59.09</td>
-      <td>363.90</td>
+      <td>0.243411</td>
+      <td>NaN</td>
+      <td>29.981966</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>59.24</td>
-      <td>363.00</td>
+      <td>0.278735</td>
+      <td>NaN</td>
+      <td>30.107902</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>59.31</td>
-      <td>362.58</td>
+      <td>0.243958</td>
+      <td>NaN</td>
+      <td>30.281246</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>2761 rows × 11 columns</p>
+<p>2314 rows × 40 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2761
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">DIC_ALT_CO2_rmse</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">bad</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">DIC_ALT_CO2_rmse</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span> <span class="c1"># 2314</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2314
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Queued</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clobber_list</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">check_cases</span><span class="p">()</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">clobber_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">clobber_list</span><span class="p">:</span>
-    <span class="n">log_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">paths</span><span class="p">[</span><span class="s1">&#39;scratch&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="s2">/run/cesm.log.????????.??????-??????&quot;</span><span class="p">))</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">log_files</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="s2">: no log&quot;</span><span class="p">)</span>
-        <span class="k">continue</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">df_case_status</span>
 
-    <span class="n">log_file</span> <span class="o">=</span> <span class="n">log_files</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fid</span><span class="p">:</span>
-        <span class="n">lines</span> <span class="o">=</span> <span class="n">fid</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">CANCELLED</span> <span class="o">=</span> <span class="nb">any</span><span class="p">([</span><span class="s2">&quot;CANCELLED&quot;</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="s2">: CANCELLED: </span><span class="si">{</span><span class="n">CANCELLED</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    
+<span class="n">dfs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bad</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()]</span><span class="o">.</span><span class="n">timestamp_run</span> <span class="c1">#.min()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>case
+smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-10-01_00007.001   2025-01-19 11:11:56
+smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_003_1999-07-01_00014.001   2025-01-18 23:58:50
+smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_006_1999-07-01_00026.001   2025-01-19 09:11:00
+smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_007_1999-10-01_00031.001   2025-01-19 11:54:34
+smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.001   2025-01-19 07:54:11
+                                                                                   ...        
+smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001         2025-02-08 02:17:07
+smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001         2025-02-08 02:18:09
+smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001         2025-02-08 02:16:48
+smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001         2025-02-08 02:16:59
+smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001         2025-02-08 02:15:36
+Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">submitted</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">good</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()]</span><span class="o">.</span><span class="n">timestamp_run</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>184
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;case&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/e63e891d7ffba792a51df7b6a058e6880c23c2bd8f89ebbf2400f85e17e54886.png" src="_images/e63e891d7ffba792a51df7b6a058e6880c23c2bd8f89ebbf2400f85e17e54886.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">good</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;smyle.cdr-atlas-v0.control.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-01-01_00004.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-04-01_00005.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-07-01_00006.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_002_1999-01-01_00008.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_002_1999-04-01_00009.001&#39;,
+       ...
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-04-01_00761.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-07-01_00762.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-10-01_00763.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-01-01_00764.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-04-01_00765.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-07-01_00766.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-10-01_00767.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-01-01_00768.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-10-01_00771.001&#39;],
+      dtype=&#39;object&#39;, name=&#39;case&#39;, length=715)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-10-01_00007.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_003_1999-07-01_00014.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_006_1999-07-01_00026.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_007_1999-10-01_00031.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_016_1999-07-01_00066.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_016_1999-10-01_00067.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_019_1999-04-01_00077.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_021_1999-04-01_00085.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_026_1999-01-01_00104.001&#39;,
+       ...
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_037_1999-07-01_02750.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_037_1999-10-01_02751.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-01-01_02752.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-04-01_02753.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-07-01_02754.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001&#39;],
+      dtype=&#39;object&#39;, name=&#39;case&#39;, length=1599)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+in=/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.single/run/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.r.0347-07-01-00000.nc
+./set-alt-co2.sh ${in}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+climate-utils/2023q2:
+   This module will be removed and replaced with a new version on January
+   15, 2025.
+
+-------------------------------------------------------------------------------
 </pre></div>
 </div>
 </div>
