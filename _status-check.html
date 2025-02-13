@@ -60,7 +60,7 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_scratch';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_status-check';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -252,7 +252,7 @@
       
       
       
-      <li><a href="_sources/_scratch.ipynb" target="_blank"
+      <li><a href="_sources/_status-check.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,6 +357,12 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -367,29 +373,6 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">atlas</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">config</span><span class="w"> </span><span class="kn">import</span> <span class="n">paths</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">njobs</span> <span class="o">=</span> <span class="mi">2067</span> <span class="c1"># jobs</span>
-
-<span class="n">nodes_per_job</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">hours_per_job</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="n">concurrent_jobs</span> <span class="o">=</span> <span class="mi">140</span>
-<span class="n">nodes_reserved</span> <span class="o">=</span> <span class="n">nodes_per_job</span> <span class="o">*</span> <span class="n">concurrent_jobs</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;reservation N nodes: </span><span class="si">{</span><span class="n">nodes_reserved</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;reservation hours: </span><span class="si">{</span><span class="n">njobs</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">concurrent_jobs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hours_per_job</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reservation N nodes: 980
-reservation hours: 147.64285714285714
 </pre></div>
 </div>
 </div>
@@ -429,8 +412,8 @@ reservation hours: 147.64285714285714
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.7 s, sys: 1.62 s, total: 3.32 s
-Wall time: 3min 58s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 501 ms, sys: 643 ms, total: 1.14 s
+Wall time: 1min 40s
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -457,6 +440,7 @@ Wall time: 3min 58s
       <th>archive</th>
       <th>error</th>
       <th>error_count</th>
+      <th>timestamp_run</th>
       <th>JobId</th>
       <th>JobState</th>
       <th>Queued</th>
@@ -465,6 +449,7 @@ Wall time: 3min 58s
     </tr>
     <tr>
       <th>case</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -487,6 +472,7 @@ Wall time: 3min 58s
       <td>True</td>
       <td>False</td>
       <td>0</td>
+      <td>2024-11-04 23:44:49</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
@@ -501,6 +487,7 @@ Wall time: 3min 58s
       <td>True</td>
       <td>False</td>
       <td>0</td>
+      <td>2024-11-05 03:13:08</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
@@ -515,6 +502,7 @@ Wall time: 3min 58s
       <td>True</td>
       <td>False</td>
       <td>0</td>
+      <td>2024-11-05 03:12:00</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
@@ -529,6 +517,7 @@ Wall time: 3min 58s
       <td>True</td>
       <td>False</td>
       <td>0</td>
+      <td>2024-11-04 20:27:38</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
@@ -543,6 +532,7 @@ Wall time: 3min 58s
       <td>True</td>
       <td>False</td>
       <td>0</td>
+      <td>2024-11-04 21:37:34</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
@@ -562,80 +552,86 @@ Wall time: 3min 58s
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_012_1999-07-01_02650.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>59.04</td>
-      <td>364.21</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_016_1999-10-01_02667.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>58.88</td>
-      <td>365.21</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_019_1999-07-01_02678.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>59.09</td>
-      <td>363.90</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_030_1999-10-01_02723.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>59.24</td>
-      <td>363.00</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_035_1999-10-01_02743.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>59.31</td>
-      <td>362.58</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>2761 rows × 11 columns</p>
+<p>1162 rows × 12 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -645,19 +641,19 @@ Wall time: 3min 58s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2761
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1162
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span> <span class="c1"># 2314</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span> <span class="c1"># 715</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2314
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>715
 </pre></div>
 </div>
 </div>

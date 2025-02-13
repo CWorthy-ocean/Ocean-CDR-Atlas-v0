@@ -380,7 +380,7 @@
 <div class="cell tag_parameters docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_forcing</span> <span class="o">=</span> <span class="s2">&quot;DOR&quot;</span>
-<span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;001&quot;</span>
+<span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;bundle&quot;</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="s2">&quot;deploy&quot;</span>
 <span class="n">clobber</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
@@ -453,7 +453,7 @@
   </thead>
   <tbody>
     <tr>
-      <th>smyle.cdr-atlas-v0.control.001</th>
+      <th>smyle.cdr-atlas-v0.control.bundle</th>
       <td>smyle</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -468,7 +468,7 @@
       <td>False</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.bundle</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -483,7 +483,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.bundle</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -498,7 +498,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.bundle</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -513,7 +513,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.bundle</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -543,7 +543,7 @@
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.bundle</th>
       <td>smyle</td>
       <td>38.0</td>
       <td>688.0</td>
@@ -558,7 +558,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.bundle</th>
       <td>smyle</td>
       <td>39.0</td>
       <td>689.0</td>
@@ -573,7 +573,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.bundle</th>
       <td>smyle</td>
       <td>39.0</td>
       <td>689.0</td>
@@ -588,7 +588,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.bundle</th>
       <td>smyle</td>
       <td>39.0</td>
       <td>689.0</td>
@@ -603,7 +603,7 @@
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.bundle</th>
       <td>smyle</td>
       <td>39.0</td>
       <td>689.0</td>
@@ -627,14 +627,110 @@
 <h2>Validate the integrations<a class="headerlink" href="#validate-the-integrations" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc</span><span class="o">.</span><span class="n">df_case_status</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>build</th>
+      <th>submitted</th>
+      <th>run_completed</th>
+      <th>archive</th>
+      <th>error</th>
+      <th>error_count</th>
+      <th>timestamp_run</th>
+      <th>JobId</th>
+      <th>JobState</th>
+      <th>Queued</th>
+      <th>yr_per_day</th>
+      <th>pe-hr_per_yr</th>
+    </tr>
+    <tr>
+      <th>case</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.bundle</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-02-13 00:19:56</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>58.96</td>
+      <td>364.74</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.bundle</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-02-13 00:19:12</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>59.07</td>
+      <td>364.07</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="n">calc</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d9d5e35c3084406e90a9040af74330f6", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 33.5 s, sys: 4.7 s, total: 38.2 s
-Wall time: 39.2 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spinning up dask cluster with scheduler:
+  /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/dask/dask_scheduler_file.obw332ft.json
+cluster running...
+Dashboard:
+ https://jupyter.nersc.gov//user/mattlong/perlmutter-login-node-base/proxy/10.249.16.163:8787/status
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2bca35af76c4458cbbd20dfbed0e5ed7", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 20.3 s, sys: 1.48 s, total: 21.8 s
+Wall time: 7min 8s
 </pre></div>
 </div>
 </div>
@@ -666,45 +762,13 @@ Wall time: 39.2 s
     <tr style="text-align: right;">
       <th></th>
       <th>is_cdr_run</th>
-      <th>ALK_ALT_CO2_rmse</th>
-      <th>ALK_rmse</th>
       <th>DIC_ALT_CO2_rmse</th>
-      <th>DIC_rmse</th>
-      <th>DOC_rmse</th>
-      <th>DOCr_rmse</th>
-      <th>DON_rmse</th>
-      <th>DONr_rmse</th>
-      <th>DOP_rmse</th>
-      <th>...</th>
-      <th>diazC_rmse</th>
-      <th>diazChl_rmse</th>
-      <th>diazFe_rmse</th>
-      <th>diazP_rmse</th>
-      <th>spC_rmse</th>
-      <th>spCaCO3_rmse</th>
-      <th>spChl_rmse</th>
-      <th>spFe_rmse</th>
-      <th>spP_rmse</th>
-      <th>zooC_rmse</th>
+      <th>ALK_ALT_CO2_rmse</th>
+      <th>ECOSYS_IFRAC_rmse</th>
+      <th>FG_ALT_CO2_rmse</th>
     </tr>
     <tr>
       <th>case</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -714,272 +778,23 @@ Wall time: 39.2 s
   </thead>
   <tbody>
     <tr>
-      <th>smyle.cdr-atlas-v0.control.001</th>
-      <td>False</td>
-      <td>0.224847</td>
-      <td>0.224846</td>
-      <td>0.325688</td>
-      <td>0.304365</td>
-      <td>0.045923</td>
-      <td>0.011091</td>
-      <td>0.004066</td>
-      <td>0.000207</td>
-      <td>0.000238</td>
-      <td>...</td>
-      <td>0.000601</td>
-      <td>0.000147</td>
-      <td>4.014262e-08</td>
-      <td>0.000005</td>
-      <td>0.025289</td>
-      <td>0.005248</td>
-      <td>0.003786</td>
-      <td>6.857399e-07</td>
-      <td>0.000216</td>
-      <td>0.010324</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.bundle</th>
       <td>True</td>
-      <td>0.230523</td>
-      <td>NaN</td>
-      <td>0.336078</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.332776</td>
+      <td>0.307738</td>
+      <td>0.002726</td>
+      <td>0.000099</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.bundle</th>
       <td>True</td>
-      <td>0.270639</td>
-      <td>NaN</td>
-      <td>0.315976</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
-      <td>True</td>
-      <td>0.225976</td>
-      <td>NaN</td>
-      <td>0.302304</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
-      <td>True</td>
-      <td>0.288906</td>
-      <td>NaN</td>
-      <td>0.368662</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
-      <td>True</td>
-      <td>0.260466</td>
-      <td>NaN</td>
-      <td>30.281244</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
-      <td>True</td>
-      <td>0.283162</td>
-      <td>NaN</td>
-      <td>29.829412</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
-      <td>True</td>
-      <td>0.243411</td>
-      <td>NaN</td>
-      <td>29.981966</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
-      <td>True</td>
-      <td>0.278735</td>
-      <td>NaN</td>
-      <td>30.107902</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
-      <td>True</td>
-      <td>0.243958</td>
-      <td>NaN</td>
-      <td>30.281246</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.344581</td>
+      <td>0.255371</td>
+      <td>0.002533</td>
+      <td>0.000108</td>
     </tr>
   </tbody>
 </table>
-<p>2314 rows × 40 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -992,7 +807,7 @@ Wall time: 39.2 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/49c60fce4cb72b70cee39bda0ab7ae9b121cba88eb78d7c3895f0edce69e5e68.png" src="_images/49c60fce4cb72b70cee39bda0ab7ae9b121cba88eb78d7c3895f0edce69e5e68.png" />
+<img alt="_images/084a1bddbd989ae4ded503427c0f75997d1cc9f9fa46a7fc9105faf8b5e97584.png" src="_images/084a1bddbd989ae4ded503427c0f75997d1cc9f9fa46a7fc9105faf8b5e97584.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1005,7 +820,7 @@ Wall time: 39.2 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/a3621117b8150e64ed7a1f9061c1c11edb4aff190b1d42199971e1c5cf264034.png" src="_images/a3621117b8150e64ed7a1f9061c1c11edb4aff190b1d42199971e1c5cf264034.png" />
+<img alt="_images/d4e7e1bd468bc458784268581e8c56afb45467c8198042a0c73d1f4470cdd039.png" src="_images/d4e7e1bd468bc458784268581e8c56afb45467c8198042a0c73d1f4470cdd039.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1018,7 +833,7 @@ Wall time: 39.2 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/258fc1c500a56d892eebd309a5b3089542d557773c014f7fd46f8be7684b83d4.png" src="_images/258fc1c500a56d892eebd309a5b3089542d557773c014f7fd46f8be7684b83d4.png" />
+<img alt="_images/ef585987a3189cd6228182dac4345146ccbe8afb28e0db84dfc02b83d4cf5b3e.png" src="_images/ef585987a3189cd6228182dac4345146ccbe8afb28e0db84dfc02b83d4cf5b3e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1028,10 +843,21 @@ Wall time: 39.2 s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_2093774/2713670039.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">.</span><span class="n">DIC_rmse</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nn">~/.conda/envs/cworthy/lib/python3.12/site-packages/pandas/core/generic.py</span> in <span class="ni">?</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6295</span>             <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessors</span>
+<span class="g g-Whitespace">   </span><span class="mi">6296</span>             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_info_axis</span><span class="o">.</span><span class="n">_can_hold_identifiers_and_holds_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6297</span>         <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">6298</span>             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="ne">-&gt; </span><span class="mi">6299</span>         <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: &#39;DataFrame&#39; object has no attribute &#39;DIC_rmse&#39;
 </pre></div>
 </div>
-<img alt="_images/192b9a48a734456d9d2a32b38799d1d7ddd7518bdb81230c079f578d8e939fcd.png" src="_images/192b9a48a734456d9d2a32b38799d1d7ddd7518bdb81230c079f578d8e939fcd.png" />
 </div>
 </div>
 </section>
@@ -1043,8 +869,6 @@ Wall time: 39.2 s
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "98e9ac1f4a6846c588b9f0815b8c0faf", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1052,81 +876,6 @@ Wall time: 39.2 s
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>zarr_path</th>
-    </tr>
-    <tr>
-      <th>case</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-01-01_00004.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_South_082_1999-04-01_01729.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_South_082_1999-07-01_01730.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_South_082_1999-10-01_01731.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_South_083_1999-01-01_01732.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-    <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_South_083_1999-04-01_01733.001</th>
-      <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
-    </tr>
-  </tbody>
-</table>
-<p>1430 rows × 1 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1139,9 +888,6 @@ Wall time: 39.2 s
     <span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">case</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/c4df2d102b89ae7caebfd348c6ed9a4845a506f84ff90223eca7cc7248f38fc5.png" src="_images/c4df2d102b89ae7caebfd348c6ed9a4845a506f84ff90223eca7cc7248f38fc5.png" />
 </div>
 </div>
 </section>

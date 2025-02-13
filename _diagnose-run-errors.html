@@ -377,8 +377,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c402eba354eb4bbbae525fddd07ecff7", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 38 s, sys: 7.49 s, total: 45.5 s
-Wall time: 6min 17s
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b707012cc61c46de9699724337c38c10", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 42.2 s, sys: 6.86 s, total: 49.1 s
+Wall time: 3min 7s
 </pre></div>
 </div>
 </div>
@@ -809,58 +809,14 @@ Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad</span><span class="o">.</span><span class="n">index</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.notebook</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">bad</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()):</span>
+    <span class="n">calc</span><span class="o">.</span><span class="n">clobber_case</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-10-01_00007.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_003_1999-07-01_00014.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_006_1999-07-01_00026.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_007_1999-10-01_00031.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_016_1999-07-01_00066.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_016_1999-10-01_00067.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_019_1999-04-01_00077.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_021_1999-04-01_00085.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_026_1999-01-01_00104.001&#39;,
-       ...
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_037_1999-07-01_02750.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_037_1999-10-01_02751.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-01-01_02752.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-04-01_02753.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-07-01_02754.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001&#39;],
-      dtype=&#39;object&#39;, name=&#39;case&#39;, length=1599)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
-in=/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.single/run/g.e22.GOMIPECOIAF_JRA-1p4-2018.TL319_g17.SMYLE.005.pop.r.0347-07-01-00000.nc
-./set-alt-co2.sh ${in}
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------------------------------------------------------------------
-There are messages associated with the following module(s):
--------------------------------------------------------------------------------
-
-climate-utils/2023q2:
-   This module will be removed and replaced with a new version on January
-   15, 2025.
-
--------------------------------------------------------------------------------
-</pre></div>
-</div>
-</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "999797d87fe040baa22554f909b6def9", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 
     <script type="text/x-thebe-config">

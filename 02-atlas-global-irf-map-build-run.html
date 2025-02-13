@@ -380,7 +380,7 @@
 <div class="cell tag_parameters docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_forcing</span> <span class="o">=</span> <span class="s2">&quot;DOR&quot;</span>
-<span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;bundle&quot;</span>
+<span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;001&quot;</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="s2">&quot;deploy&quot;</span>
 <span class="n">clobber</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
@@ -634,11 +634,91 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 5.72 ms, sys: 1.65 ms, total: 7.36 ms
-Wall time: 1.8 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 11.8 ms, sys: 12.6 ms, total: 24.4 ms
+Wall time: 280 ms
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>build</th>
+      <th>submitted</th>
+      <th>run_completed</th>
+      <th>archive</th>
+      <th>error</th>
+      <th>error_count</th>
+      <th>timestamp_run</th>
+      <th>JobId</th>
+      <th>JobState</th>
+      <th>Queued</th>
+      <th>yr_per_day</th>
+      <th>pe-hr_per_yr</th>
+    </tr>
+    <tr>
+      <th>case</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.bundle</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.bundle</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="build-the-model-for-each-experiment">
@@ -670,23 +750,13 @@ Wall time: 1.8 s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">just_these_cases</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="sa">f</span><span class="s1">&#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.</span><span class="si">{</span><span class="n">vintage</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="c1"># good</span>
-    <span class="sa">f</span><span class="s1">&#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.</span><span class="si">{</span><span class="n">vintage</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="c1"># bad</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">phase</span><span class="o">=</span><span class="n">phase</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span> <span class="n">clobber_list</span><span class="o">=</span><span class="n">clobber_list</span><span class="p">,</span> <span class="n">just_these_cases</span><span class="o">=</span><span class="n">just_these_cases</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">phase</span><span class="o">=</span><span class="n">phase</span><span class="p">,</span> <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span> <span class="n">clobber_list</span><span class="o">=</span><span class="n">clobber_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Submitted batch job 35765277
-Submitted batch job 35765279
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Submitted batch job 35791768
+Submitted batch job 35791770
 </pre></div>
 </div>
 </div>
@@ -696,13 +766,13 @@ Submitted batch job 35765279
 <h2>Run the simulations<a class="headerlink" href="#run-the-simulations" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">n_bundle</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">just_these_cases</span><span class="o">=</span><span class="n">just_these_cases</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">n_bundle</span><span class="o">=</span><span class="mi">140</span><span class="p">,</span> <span class="n">bundle_queue</span><span class="o">=</span><span class="s2">&quot;regular&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>waiting on 2 build(s)
-.........
+........................................................................
 </pre></div>
 </div>
 </div>
