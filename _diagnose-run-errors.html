@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -66,7 +63,6 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -91,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -98,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,8 +125,7 @@
       
         
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -148,17 +155,21 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Ocean CDR Atlas, v0 - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Ocean CDR Atlas, v0 - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Ocean CDR Atlas, v0 - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stage Data</span></p>
@@ -186,14 +197,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -305,16 +311,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -377,8 +391,295 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b707012cc61c46de9699724337c38c10", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 42.2 s, sys: 6.86 s, total: 49.1 s
-Wall time: 3min 7s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spinning up dask cluster with scheduler:
+  /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/dask/dask_scheduler_file.k1zeqwnw.json
+cluster running...
+Dashboard:
+ https://jupyter.nersc.gov//user/mattlong/perlmutter-login-node-base/proxy/10.249.8.39:8787/status
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f3c5301e71c741ff9c1ebd35907f8a2b", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>smyle.cdr-atlas-v0.glb-dor_South_038_1999-07-01_01554.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_038_1999-10-01_01555.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_039_1999-01-01_01556.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_039_1999-04-01_01557.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_039_1999-07-01_01558.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_039_1999-10-01_01559.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_040_1999-01-01_01560.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_040_1999-04-01_01561.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_040_1999-07-01_01562.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_040_1999-10-01_01563.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_041_1999-01-01_01564.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_041_1999-04-01_01565.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_041_1999-07-01_01566.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_041_1999-10-01_01567.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_042_1999-01-01_01568.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_042_1999-04-01_01569.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_042_1999-07-01_01570.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_042_1999-10-01_01571.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_043_1999-01-01_01572.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_043_1999-04-01_01573.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_043_1999-07-01_01574.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_043_1999-10-01_01575.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_044_1999-01-01_01576.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_044_1999-04-01_01577.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_044_1999-07-01_01578.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_044_1999-10-01_01579.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_045_1999-01-01_01580.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_045_1999-04-01_01581.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_045_1999-07-01_01582.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_045_1999-10-01_01583.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_046_1999-01-01_01584.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_046_1999-04-01_01585.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_046_1999-07-01_01586.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_046_1999-10-01_01587.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_047_1999-01-01_01588.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_047_1999-04-01_01589.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_047_1999-07-01_01590.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_047_1999-10-01_01591.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_048_1999-01-01_01592.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_048_1999-04-01_01593.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_048_1999-07-01_01594.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_048_1999-10-01_01595.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_049_1999-01-01_01596.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_049_1999-04-01_01597.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_049_1999-07-01_01598.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_049_1999-10-01_01599.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_050_1999-01-01_01600.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_050_1999-04-01_01601.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_050_1999-07-01_01602.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_050_1999-10-01_01603.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_051_1999-01-01_01604.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_051_1999-04-01_01605.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_051_1999-07-01_01606.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_051_1999-10-01_01607.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_052_1999-01-01_01608.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_052_1999-04-01_01609.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_052_1999-07-01_01610.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_052_1999-10-01_01611.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_053_1999-01-01_01612.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_053_1999-04-01_01613.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_053_1999-07-01_01614.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_053_1999-10-01_01615.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_054_1999-01-01_01616.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_054_1999-04-01_01617.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_054_1999-07-01_01618.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_054_1999-10-01_01619.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_055_1999-01-01_01620.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_055_1999-04-01_01621.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_055_1999-07-01_01622.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_055_1999-10-01_01623.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_056_1999-01-01_01624.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_056_1999-04-01_01625.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_056_1999-07-01_01626.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_056_1999-10-01_01627.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_057_1999-01-01_01628.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_057_1999-04-01_01629.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_057_1999-07-01_01630.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_057_1999-10-01_01631.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_058_1999-01-01_01632.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_058_1999-04-01_01633.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_058_1999-07-01_01634.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_058_1999-10-01_01635.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_059_1999-01-01_01636.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_059_1999-04-01_01637.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_059_1999-07-01_01638.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_059_1999-10-01_01639.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_060_1999-01-01_01640.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_060_1999-04-01_01641.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_060_1999-07-01_01642.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_060_1999-10-01_01643.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_061_1999-01-01_01644.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_061_1999-04-01_01645.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_061_1999-07-01_01646.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_061_1999-10-01_01647.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_062_1999-01-01_01648.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_062_1999-04-01_01649.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_062_1999-07-01_01650.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_062_1999-10-01_01651.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_063_1999-01-01_01652.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_063_1999-04-01_01653.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_063_1999-07-01_01654.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_063_1999-10-01_01655.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_064_1999-01-01_01656.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_064_1999-04-01_01657.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_064_1999-07-01_01658.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_064_1999-10-01_01659.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_065_1999-01-01_01660.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_065_1999-04-01_01661.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_065_1999-07-01_01662.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_065_1999-10-01_01663.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_066_1999-01-01_01664.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_066_1999-04-01_01665.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_066_1999-07-01_01666.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_066_1999-10-01_01667.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_067_1999-01-01_01668.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_067_1999-04-01_01669.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_067_1999-07-01_01670.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_067_1999-10-01_01671.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_068_1999-01-01_01672.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_068_1999-04-01_01673.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_068_1999-07-01_01674.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_068_1999-10-01_01675.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_069_1999-01-01_01676.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_069_1999-04-01_01677.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_069_1999-07-01_01678.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_069_1999-10-01_01679.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_070_1999-01-01_01680.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_070_1999-04-01_01681.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_070_1999-07-01_01682.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_070_1999-10-01_01683.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_071_1999-01-01_01684.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_071_1999-04-01_01685.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_071_1999-07-01_01686.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_071_1999-10-01_01687.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_072_1999-01-01_01688.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_072_1999-04-01_01689.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_072_1999-07-01_01690.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_072_1999-10-01_01691.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_073_1999-01-01_01692.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_073_1999-04-01_01693.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_073_1999-07-01_01694.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_073_1999-10-01_01695.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_074_1999-01-01_01696.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_074_1999-04-01_01697.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_074_1999-07-01_01698.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_074_1999-10-01_01699.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_075_1999-01-01_01700.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_075_1999-04-01_01701.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_075_1999-07-01_01702.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_075_1999-10-01_01703.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_076_1999-01-01_01704.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_076_1999-04-01_01705.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_076_1999-07-01_01706.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_076_1999-10-01_01707.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_077_1999-01-01_01708.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_077_1999-04-01_01709.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_077_1999-07-01_01710.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_077_1999-10-01_01711.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_078_1999-01-01_01712.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_078_1999-04-01_01713.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_078_1999-07-01_01714.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_078_1999-10-01_01715.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_079_1999-01-01_01716.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_079_1999-04-01_01717.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_079_1999-07-01_01718.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_079_1999-10-01_01719.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_080_1999-01-01_01720.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_080_1999-04-01_01721.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_080_1999-07-01_01722.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_080_1999-10-01_01723.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_081_1999-01-01_01724.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_081_1999-04-01_01725.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_081_1999-07-01_01726.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_081_1999-10-01_01727.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_082_1999-01-01_01728.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_082_1999-04-01_01729.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_082_1999-07-01_01730.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_082_1999-10-01_01731.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_083_1999-01-01_01732.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_083_1999-04-01_01733.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_083_1999-07-01_01734.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_083_1999-10-01_01735.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_084_1999-01-01_01736.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_084_1999-04-01_01737.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_084_1999-07-01_01738.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_084_1999-10-01_01739.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_085_1999-01-01_01740.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_085_1999-04-01_01741.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_085_1999-07-01_01742.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_085_1999-10-01_01743.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_086_1999-01-01_01744.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_086_1999-04-01_01745.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_086_1999-07-01_01746.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_086_1999-10-01_01747.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_087_1999-01-01_01748.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_087_1999-04-01_01749.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_087_1999-07-01_01750.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_087_1999-10-01_01751.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_088_1999-01-01_01752.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_088_1999-04-01_01753.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_088_1999-07-01_01754.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_088_1999-10-01_01755.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_089_1999-01-01_01756.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_089_1999-04-01_01757.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_089_1999-07-01_01758.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_089_1999-10-01_01759.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_090_1999-01-01_01760.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_090_1999-04-01_01761.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_090_1999-07-01_01762.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_090_1999-10-01_01763.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_091_1999-01-01_01764.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_091_1999-04-01_01765.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_091_1999-07-01_01766.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_091_1999-10-01_01767.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_092_1999-01-01_01768.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_092_1999-04-01_01769.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_092_1999-07-01_01770.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_092_1999-10-01_01771.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_093_1999-01-01_01772.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_093_1999-04-01_01773.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_093_1999-07-01_01774.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_093_1999-10-01_01775.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_094_1999-01-01_01776.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_094_1999-04-01_01777.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_094_1999-07-01_01778.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_094_1999-10-01_01779.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_095_1999-01-01_01780.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_095_1999-04-01_01781.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_095_1999-07-01_01782.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_095_1999-10-01_01783.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_096_1999-01-01_01784.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_096_1999-04-01_01785.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_096_1999-07-01_01786.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_096_1999-10-01_01787.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_097_1999-01-01_01788.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_097_1999-04-01_01789.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_097_1999-07-01_01790.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_097_1999-10-01_01791.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_098_1999-01-01_01792.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_098_1999-04-01_01793.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_098_1999-07-01_01794.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_098_1999-10-01_01795.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_099_1999-01-01_01796.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_099_1999-04-01_01797.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_099_1999-07-01_01798.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_099_1999-10-01_01799.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_100_1999-01-01_01800.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_100_1999-04-01_01801.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_100_1999-07-01_01802.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_100_1999-10-01_01803.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_101_1999-01-01_01804.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_101_1999-04-01_01805.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_101_1999-07-01_01806.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_101_1999-10-01_01807.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_102_1999-01-01_01808.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_102_1999-04-01_01809.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_102_1999-07-01_01810.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_102_1999-10-01_01811.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_103_1999-01-01_01812.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_103_1999-04-01_01813.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_103_1999-07-01_01814.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_103_1999-10-01_01815.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_104_1999-01-01_01816.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_104_1999-04-01_01817.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_104_1999-07-01_01818.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_104_1999-10-01_01819.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_105_1999-01-01_01820.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_105_1999-04-01_01821.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_105_1999-07-01_01822.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_105_1999-10-01_01823.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_106_1999-01-01_01824.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_106_1999-04-01_01825.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_106_1999-07-01_01826.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_106_1999-10-01_01827.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_107_1999-01-01_01828.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_107_1999-04-01_01829.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_107_1999-07-01_01830.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_107_1999-10-01_01831.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_108_1999-01-01_01832.001: no files
+smyle.cdr-atlas-v0.glb-dor_South_108_1999-04-01_01833.001: no files
+CPU times: user 32.2 s, sys: 4.69 s, total: 36.9 s
+Wall time: 11min 10s
 </pre></div>
 </div>
 </div>
@@ -602,11 +903,11 @@ Wall time: 3min 7s
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_South_037_1999-01-01_01548.001</th>
       <td>True</td>
-      <td>0.260466</td>
+      <td>0.278807</td>
       <td>NaN</td>
-      <td>30.281244</td>
+      <td>0.286678</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -626,11 +927,11 @@ Wall time: 3min 7s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_South_037_1999-04-01_01549.001</th>
       <td>True</td>
-      <td>0.283162</td>
+      <td>0.245794</td>
       <td>NaN</td>
-      <td>29.829412</td>
+      <td>0.328382</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -650,11 +951,11 @@ Wall time: 3min 7s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_South_037_1999-10-01_01551.001</th>
       <td>True</td>
-      <td>0.243411</td>
+      <td>0.274889</td>
       <td>NaN</td>
-      <td>29.981966</td>
+      <td>0.295347</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -674,11 +975,11 @@ Wall time: 3min 7s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_South_038_1999-01-01_01552.001</th>
       <td>True</td>
-      <td>0.278735</td>
+      <td>0.290439</td>
       <td>NaN</td>
-      <td>30.107902</td>
+      <td>0.312123</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -698,11 +999,11 @@ Wall time: 3min 7s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_South_038_1999-04-01_01553.001</th>
       <td>True</td>
-      <td>0.243958</td>
+      <td>0.270392</td>
       <td>NaN</td>
-      <td>30.281246</td>
+      <td>0.359278</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -723,7 +1024,7 @@ Wall time: 3min 7s
     </tr>
   </tbody>
 </table>
-<p>2314 rows × 40 columns</p>
+<p>1415 rows × 40 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -744,19 +1045,7 @@ Wall time: 3min 7s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>case
-smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-10-01_00007.001   2025-01-19 11:11:56
-smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_003_1999-07-01_00014.001   2025-01-18 23:58:50
-smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_006_1999-07-01_00026.001   2025-01-19 09:11:00
-smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_007_1999-10-01_00031.001   2025-01-19 11:54:34
-smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_008_1999-07-01_00034.001   2025-01-19 07:54:11
-                                                                                   ...        
-smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001         2025-02-08 02:17:07
-smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001         2025-02-08 02:18:09
-smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001         2025-02-08 02:16:48
-smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001         2025-02-08 02:16:59
-smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001         2025-02-08 02:15:36
-Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series([], Name: timestamp_run, dtype: datetime64[ns])
 </pre></div>
 </div>
 </div>
@@ -771,7 +1060,7 @@ Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;case&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/e63e891d7ffba792a51df7b6a058e6880c23c2bd8f89ebbf2400f85e17e54886.png" src="_images/e63e891d7ffba792a51df7b6a058e6880c23c2bd8f89ebbf2400f85e17e54886.png" />
+<img alt="_images/9fe7e5480f434f2f412e4c0b6d8a4a67b4a31dd396ce9f183bc088159fa57000.png" src="_images/9fe7e5480f434f2f412e4c0b6d8a4a67b4a31dd396ce9f183bc088159fa57000.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -789,20 +1078,20 @@ Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
        &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-01-01_00004.001&#39;,
        &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-04-01_00005.001&#39;,
        &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-07-01_00006.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_001_1999-10-01_00007.001&#39;,
        &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_002_1999-01-01_00008.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_002_1999-04-01_00009.001&#39;,
        ...
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-04-01_00761.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-07-01_00762.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_040_1999-10-01_00763.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-01-01_00764.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-04-01_00765.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-07-01_00766.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-10-01_00767.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-01-01_00768.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.001&#39;,
-       &#39;smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-10-01_00771.001&#39;],
-      dtype=&#39;object&#39;, name=&#39;case&#39;, length=715)
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_035_1999-07-01_01542.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_035_1999-10-01_01543.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_036_1999-04-01_01545.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_036_1999-07-01_01546.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_036_1999-10-01_01547.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_037_1999-01-01_01548.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_037_1999-04-01_01549.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_037_1999-10-01_01551.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_038_1999-01-01_01552.001&#39;,
+       &#39;smyle.cdr-atlas-v0.glb-dor_South_038_1999-04-01_01553.001&#39;],
+      dtype=&#39;object&#39;, name=&#39;case&#39;, length=1415)
 </pre></div>
 </div>
 </div>
@@ -816,7 +1105,7 @@ Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "999797d87fe040baa22554f909b6def9", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ea2f4fff78f2410f8bc05d5deae76f80", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -856,8 +1145,7 @@ Name: timestamp_run, Length: 1599, dtype: datetime64[ns]
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -915,8 +1203,8 @@ By [C]Worthy
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

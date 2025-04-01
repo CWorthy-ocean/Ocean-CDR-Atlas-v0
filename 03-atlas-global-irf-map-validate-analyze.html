@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -68,7 +65,6 @@
     <link rel="prev" title="Global IRF Efficiency Map" href="02-atlas-global-irf-map-build-run.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +80,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -93,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,8 +125,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -148,17 +155,21 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Ocean CDR Atlas, v0 - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Ocean CDR Atlas, v0 - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Ocean CDR Atlas, v0 - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stage Data</span></p>
@@ -186,14 +197,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -305,16 +311,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -370,6 +384,8 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.notebook</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">atlas</span>
 </pre></div>
 </div>
@@ -381,7 +397,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_forcing</span> <span class="o">=</span> <span class="s2">&quot;DOR&quot;</span>
 <span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;001&quot;</span>
-<span class="n">phase</span> <span class="o">=</span> <span class="s2">&quot;deploy&quot;</span>
 <span class="n">clobber</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
@@ -773,77 +788,77 @@
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
-      <td>NaT</td>
+      <td>2025-03-13 04:44:19</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>55.20</td>
+      <td>389.56</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
-      <td>NaT</td>
+      <td>2025-03-13 04:40:44</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>55.71</td>
+      <td>385.98</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
-      <td>NaT</td>
+      <td>2025-03-13 04:39:37</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>55.95</td>
+      <td>384.32</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
-      <td>NaT</td>
+      <td>2025-03-13 04:33:59</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>56.92</td>
+      <td>377.78</td>
     </tr>
     <tr>
       <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
       <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
       <td>False</td>
       <td>0</td>
-      <td>NaT</td>
+      <td>2025-03-18 03:40:09</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>56.86</td>
+      <td>378.18</td>
     </tr>
   </tbody>
 </table>
@@ -858,8 +873,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "513445ee586749e18ce1e5ab3d980468", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 12.9 s, sys: 2.36 s, total: 15.2 s
-Wall time: 58.6 s
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d224f09a71b1483898fddd04be92ca34", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "979ad78fc08e48b3aaf288f8abfa8901", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1min 5s, sys: 9.64 s, total: 1min 14s
+Wall time: 3min 34s
 </pre></div>
 </div>
 </div>
@@ -1083,11 +1098,11 @@ Wall time: 58.6 s
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-07-01_00766.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
       <td>True</td>
-      <td>0.336016</td>
+      <td>0.286924</td>
       <td>NaN</td>
-      <td>0.332937</td>
+      <td>0.350337</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1107,11 +1122,11 @@ Wall time: 58.6 s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-10-01_00767.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
       <td>True</td>
-      <td>0.292772</td>
+      <td>0.232214</td>
       <td>NaN</td>
-      <td>0.334584</td>
+      <td>0.273196</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1131,11 +1146,11 @@ Wall time: 58.6 s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-01-01_00768.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
       <td>True</td>
-      <td>0.254586</td>
+      <td>0.296765</td>
       <td>NaN</td>
-      <td>0.313482</td>
+      <td>0.439302</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1155,11 +1170,11 @@ Wall time: 58.6 s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
       <td>True</td>
-      <td>0.255371</td>
+      <td>0.278215</td>
       <td>NaN</td>
-      <td>0.344581</td>
+      <td>0.286267</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1179,11 +1194,11 @@ Wall time: 58.6 s
       <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-10-01_00771.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
       <td>True</td>
-      <td>0.238769</td>
+      <td>0.269060</td>
       <td>NaN</td>
-      <td>0.339451</td>
+      <td>0.324089</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -1204,7 +1219,7 @@ Wall time: 58.6 s
     </tr>
   </tbody>
 </table>
-<p>715 rows × 40 columns</p>
+<p>2761 rows × 40 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1217,7 +1232,7 @@ Wall time: 58.6 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/d7f59a8c1bb224bd9fef9d4a1a1597a0eef5020c54b9acb72e4779e439d7d70b.png" src="_images/d7f59a8c1bb224bd9fef9d4a1a1597a0eef5020c54b9acb72e4779e439d7d70b.png" />
+<img alt="_images/be7c3c538d4318672689294fd626e9ddf3b69041044fa3cd10cfa64daa703071.png" src="_images/be7c3c538d4318672689294fd626e9ddf3b69041044fa3cd10cfa64daa703071.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1230,7 +1245,7 @@ Wall time: 58.6 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/febb30efbb4635ca4ba4fbfd029ee9b893692e4a37cd3f7767c624ab9bddb0a6.png" src="_images/febb30efbb4635ca4ba4fbfd029ee9b893692e4a37cd3f7767c624ab9bddb0a6.png" />
+<img alt="_images/f1412488e1b734eba2fe3a3695cd231a67f7e1038a1cc46becefeb10ad4cb01b.png" src="_images/f1412488e1b734eba2fe3a3695cd231a67f7e1038a1cc46becefeb10ad4cb01b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1243,7 +1258,7 @@ Wall time: 58.6 s
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/66fce2f9f8f024ff47eeee1016138faf134782014fea36b511609e80c37093f9.png" src="_images/66fce2f9f8f024ff47eeee1016138faf134782014fea36b511609e80c37093f9.png" />
+<img alt="_images/b74668612e8d7ed464dc937489a124548ad7aea4ad5bb4fb7b6638f04476b6ad.png" src="_images/b74668612e8d7ed464dc937489a124548ad7aea4ad5bb4fb7b6638f04476b6ad.png" />
 </div>
 </div>
 </section>
@@ -1251,12 +1266,12 @@ Wall time: 58.6 s
 <h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">clobber</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1430</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">clobber</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b30519e5d5ce43b280940f366ed99d22", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "72e176be40694c9a8d671ddc5bd1ddba", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "d3e253f9e0f5408f91cbfe7a43224d77", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "f6aa13dd26b947878e019c233a2c2e98", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "0512d3eb1b744b8bbe1ab5ea6639a775", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "9ff25cf7f46f4604ad2ab0b2761c4627", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "b1e80eeada194e6d94c2e9758f9fe51b", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "d3be5dd83aac485288605c53daf4a41f", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "a47f95d98e6e46df95d7e1547059ddba", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "dc8ec2b3013d4b7abe3888d5d565e763", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "c489e74e8d544d678faff620273207f5", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "8ebea55ebf934f09ad6e1954776a8553", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "e82a9f0be2ac4fee8c114253b494e4a5", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "6aaa901164e043689adc07ba38bde907", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "2cd580dedf984cd3988d28a726faae13", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "5bd37bccbd3e4604bfda15bb2939e4ad", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "1ac817937a6b4e02a010117b05620e53", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "ab897b60da114a2eae5523471771c844", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "6855e34a2997479fbfa0f20403df7da0", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "dc1d0b5df10642048234d1047208298c", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "aa6b409bace147638cdd44a903fcefe2", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "40083d3705434f6ebc4cd0cc7882fd4f", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "b83edb2f62a04fc89872e88ae1ed9d87", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "b2bf3c2fe3544b35855f210647360fd4", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "27de2a9e26154fd4b6ec6df6b18b3548", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "4199eaaba39640598d40d06f57036392", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "ee7f8a693cff44e490e54e41cc004193", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "c2c7d7033e4f4d22aa420e495a9e4dcc", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "6426cb391d9c425b97827a91bc216e63", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "012917def3fe45a68c285a624fcb1127", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "4a1df431a56841578a58f384a524215b", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "6436122c78924707b79dc282b0f043e7", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "71218299ce6847c283faf22fa706e0f4", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "4b837227e57a4e8cbf08f429f925fc64", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "ebbed1e115bb433dbd291f671c6cd305", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "eeacbd4a86bc4426a19c51837f3abf4f", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "d4f2a89301ba47da9b741f700bb63887", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "883f1dea4ee048d0a1bfa9b0596091d7", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "1a7de110265244618652f68c6f723a4e", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "7bb9d8fd0c864fc09fa2325e3277250c", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "c1dd8cb09cca47c691334da9e2c93556", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "2a41caaa2bbf458b82034fc67dbe17c0", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "a0240b35178f4dfdb79ff4947d5f37ab", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "d6b8c4d358884f9292b731cafd337735", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "7b49b7bb5ff64ea985dcf52714a2975a", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "b1ddeb9196ce492fbce4dcfb32d1b56d", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "9dfc348098644542922a271ed4f88a7d", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "a6162c1715bb418bb37273cf3cbc8d00", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "02b4f7a4a9134881875afaa5a5e168be", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "7f09e32e30b34e04a195dae551a4aa43", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "00941f4bad874987bb9aef75a06e0306", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "a3d5eb3220c8498ba1a81777809b6fcd", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "8b94eb9ca01f4cb7b31eb9dfd8bfd415", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "fa2cddd05e4e40a7a50152e59d6de3fd", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "57cf37e4f1fa463987cb10e86b778d6c", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "f2de2741713b47eca7cbc61937fea909", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "fee053846c664d0cba4e26c5e4c31c49", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1316,44 +1331,54 @@ Wall time: 58.6 s
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-07-01_00766.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
       <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_041_1999-10-01_00767.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
       <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-01-01_00768.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
       <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-04-01_00769.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
       <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Pacific_basin_042_1999-10-01_00771.001</th>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
       <td>/global/cfs/projectdirs/m4746/Projects/Ocean-C...</td>
     </tr>
   </tbody>
 </table>
-<p>714 rows × 1 columns</p>
+<p>2760 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">row_data</span> <span class="ow">in</span> <span class="n">calc</span><span class="o">.</span><span class="n">df_analysis</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">row_data</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">calc</span><span class="o">.</span><span class="n">df_analysis</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()):</span>
     <span class="n">case</span> <span class="o">=</span> <span class="n">row_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">path_zarr</span> <span class="o">=</span> <span class="n">row_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   
-    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">path_zarr</span><span class="p">)[</span><span class="s2">&quot;DIC_ADD_TOTAL&quot;</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">path_zarr</span><span class="p">,</span> <span class="n">decode_timedelta</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">da</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s2">&quot;DIC_ADD_TOTAL&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">year</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;bad time:</span><span class="se">\n\t</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="se">\n\t</span><span class="si">{</span><span class="n">path_zarr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FAILED</span><span class="se">\n\t</span><span class="si">{</span><span class="n">case</span><span class="si">}</span><span class="se">\n\t</span><span class="si">{</span><span class="n">path_zarr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
     <span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">case</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f492ee749441ffebe09f703f912fb2bf5d92989017e9a4533600cc312729aa1f.png" src="_images/f492ee749441ffebe09f703f912fb2bf5d92989017e9a4533600cc312729aa1f.png" />
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "cb512118faf24b99825f8e9add95d1ff", "version_major": 2, "version_minor": 0}</script><img alt="_images/4279e1a3474b30b091d850d69327b37c2537b322c483cd1438ea403fc0819e28.png" src="_images/4279e1a3474b30b091d850d69327b37c2537b322c483cd1438ea403fc0819e28.png" />
 </div>
 </div>
 </section>
@@ -1365,6 +1390,232 @@ Wall time: 58.6 s
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">df_case_status</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>build</th>
+      <th>submitted</th>
+      <th>run_completed</th>
+      <th>archive</th>
+      <th>error</th>
+      <th>error_count</th>
+      <th>timestamp_run</th>
+      <th>JobId</th>
+      <th>JobState</th>
+      <th>Queued</th>
+      <th>yr_per_day</th>
+      <th>pe-hr_per_yr</th>
+    </tr>
+    <tr>
+      <th>case</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>smyle.cdr-atlas-v0.control.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2024-11-04 23:44:49</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>45.61</td>
+      <td>471.47</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2024-11-05 03:13:08</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>58.82</td>
+      <td>365.62</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2024-11-05 03:12:00</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>59.00</td>
+      <td>364.49</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2024-11-04 20:27:38</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>58.89</td>
+      <td>365.17</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2024-11-04 21:37:34</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>58.94</td>
+      <td>364.83</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-03-13 04:44:19</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>55.20</td>
+      <td>389.56</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-03-13 04:40:44</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>55.71</td>
+      <td>385.98</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-03-13 04:39:37</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>55.95</td>
+      <td>384.32</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-03-13 04:33:59</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>56.92</td>
+      <td>377.78</td>
+    </tr>
+    <tr>
+      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0</td>
+      <td>2025-03-18 03:40:09</td>
+      <td>None</td>
+      <td>None</td>
+      <td>False</td>
+      <td>56.86</td>
+      <td>378.18</td>
+    </tr>
+  </tbody>
+</table>
+<p>2761 rows × 12 columns</p>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -1424,8 +1675,7 @@ Wall time: 58.6 s
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1487,8 +1737,8 @@ By [C]Worthy
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
