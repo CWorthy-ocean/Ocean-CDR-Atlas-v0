@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -367,8 +367,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cesm</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">state</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">config</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">atlas</span>
 </pre></div>
 </div>
 </div>
@@ -426,12 +426,7 @@ WAV component is Stub wave component
 IAC component is Stub iac component
 ESP component is Stub external system processing (ESP) component
 Pes     specification file is /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/components/pop//cime_config/config_pes.xml
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Could not find machine match for &#39;login38.chn&#39; or &#39;login38&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Machine is perlmutter
+Machine is perlmutter
 Pes setting: grid match    is oi%tx0.1v3 
 Pes setting: compset_match is _DATM.*_CICE.*_POP2 
 Pes setting: grid          is a%TL319_l%null_oi%tx0.1v3_r%JRA025v2_g%null_w%null_z%null_m%tx0.1v3 
@@ -442,16 +437,17 @@ Pes setting: rootpe      is {&#39;ROOTPE_ATM&#39;: 0, &#39;ROOTPE_LND&#39;: 0, &
 Pes setting: pstrid      is {} 
 Pes other settings: {}
 Pes comments: none
- Compset is: 1850_DATM%JRA-1p4-2018_SLND_CICE%CICE4_POP2%ECO_DROF%JRA-1p4-2018_SGLC_SWAV_SIAC_SESP 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Could not find machine match for &#39;login04.chn&#39; or &#39;login04&#39;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Compset is: 1850_DATM%JRA-1p4-2018_SLND_CICE%CICE4_POP2%ECO_DROF%JRA-1p4-2018_SGLC_SWAV_SIAC_SESP 
  Grid is: a%TL319_l%null_oi%tx0.1v3_r%JRA025v2_g%null_w%null_z%null_m%tx0.1v3 
  Components in compset are: [&#39;datm&#39;, &#39;slnd&#39;, &#39;cice&#39;, &#39;pop&#39;, &#39;drof&#39;, &#39;sglc&#39;, &#39;swav&#39;, &#39;siac&#39;, &#39;sesp&#39;] 
 No charge_account info available, using value from PROJECT
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: No cesm Model version found.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Batch_system_type is slurm
+cesm model version found: v1.0.0-7-gbc105d4
+Batch_system_type is slurm
 job is case.run USER_REQUESTED_WALLTIME 48:00:00 USER_REQUESTED_QUEUE premium WALLTIME_FORMAT %H:%M:%S
 job is case.st_archive USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
  Creating Case directory /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001
@@ -465,8 +461,8 @@ Setting Environment HDF5_USE_FILE_LOCKING=FALSE
 Setting Environment PERL5LIB=/global/cfs/cdirs/e3sm/perl/lib/perl5-only-switch
 Setting Environment FI_CXI_RX_MATCH_MODE=software
 Setting Environment MPICH_COLL_SYNC=MPI_Bcast
-Setting Environment NETCDF_PATH=/opt/cray/pe/netcdf-hdf5parallel/4.9.0.3/intel/19.0
-Setting Environment PNETCDF_PATH=/opt/cray/pe/parallel-netcdf/1.12.3.3/intel/19.0
+Setting Environment NETCDF_PATH=/opt/cray/pe/netcdf/4.9.0.13/intel/2023.2
+Setting Environment PNETCDF_PATH=/opt/cray/pe/parallel-netcdf/1.12.3.13/intel/2023.2
 Setting resource.RLIMIT_STACK to -1 from (8388608, -1)
 copying /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/config/cesm/machines/Depends.intel -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001
 </pre></div>
@@ -506,52 +502,174 @@ You can now run &#39;./preview_run&#39; to get more info on how your case will b
 /global/u2/m/mattlong/codes/Ocean-CDR-Atlas-v0/workflows/input/cesm2.2.0/cases/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10
 /global/u2/m/mattlong/codes/Ocean-CDR-Atlas-v0/workflows/input/cesm2.2.0/cases/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001/user_datm.streams.txt.presaero.clim_1850 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.presaero.clim_1850
 /global/u2/m/mattlong/codes/Ocean-CDR-Atlas-v0/workflows/input/cesm2.2.0/cases/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.U_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.U_10
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.cice.r.1999-01-01-00000.nc&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.cice.r.1999-01-01-00000.nc&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.cpl.r.1999-01-01-00000.nc&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.cpl.r.1999-01-01-00000.nc&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.pop.r.1999-01-01-00000.nc&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001.pop.r.1999-01-01-00000.nc&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.atm&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.atm&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.drv&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.drv&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.ice&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.ice&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.ocn.ovf&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.ocn.ovf&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.ocn.restart&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.ocn.restart&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.ocn.tavg&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.ocn.tavg&#39;
+&#39;/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest/1999-01-01-00000/rpointer.rof&#39; -&gt; &#39;/pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/./rpointer.rof&#39;
+Building case in directory /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001
+sharedlib_only is False
+model_only is False
+Setting Environment MPICH_ENV_DISPLAY=1
+Setting Environment MPICH_VERSION_DISPLAY=1
+Setting Environment OMP_STACKSIZE=128M
+Setting Environment OMP_PROC_BIND=spread
+Setting Environment OMP_PLACES=threads
+Setting Environment HDF5_USE_FILE_LOCKING=FALSE
+Setting Environment PERL5LIB=/global/cfs/cdirs/e3sm/perl/lib/perl5-only-switch
+Setting Environment FI_CXI_RX_MATCH_MODE=software
+Setting Environment MPICH_COLL_SYNC=MPI_Bcast
+Setting Environment NETCDF_PATH=/opt/cray/pe/netcdf/4.9.0.13/intel/2023.2
+Setting Environment PNETCDF_PATH=/opt/cray/pe/parallel-netcdf/1.12.3.13/intel/2023.2
+Setting resource.RLIMIT_STACK to -1 from (8388608, -1)
+Generating component namelists as part of build
+GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+Creating component namelists
+  2025-06-02 16:19:36 atm 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/data_comps_mct/datm/cime_config/buildnml
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.GCGCS.PREC -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GCGCS.PREC
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.GISS.LWDN -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GISS.LWDN
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.GISS.SWDN -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GISS.SWDN
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.SLP_ -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.SLP_
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.T_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.T_10
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.U_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.U_10
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.CORE_IAF_JRA.NCEP.V_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.V_10
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.presaero.clim_1850 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.presaero.clim_1850
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/user_datm.streams.txt.co2tseries.omip -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.co2tseries.omip
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm_in -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10 -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GCGCS.PREC -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.T_10 -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.SLP_ -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.U_10 -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GISS.LWDN -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.co2tseries.omip -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.GISS.SWDN -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.presaero.clim_1850 -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/datmconf/datm.streams.txt.CORE_IAF_JRA.NCEP.V_10 -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+  2025-06-02 16:19:36 lnd 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/stub_comps_mct/slnd/cime_config/buildnml
+  2025-06-02 16:19:37 ice 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/components/cice//cime_config/buildnml
+     ...buildnml calling cice buildcpp to set build time options
+  2025-06-02 16:19:37 ocn 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/components/pop//cime_config/buildnml
+     ... buildnml: calling pop buildcpp to set build time options
+  2025-06-02 16:19:39 rof 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/data_comps_mct/drof/cime_config/buildnml
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/drofconf/drof_in -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/drofconf/drof.streams.txt.rof.iaf_jra -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+  2025-06-02 16:19:40 glc 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/stub_comps_mct/sglc/cime_config/buildnml
+  2025-06-02 16:19:40 wav 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/stub_comps_mct/swav/cime_config/buildnml
+  2025-06-02 16:19:40 iac 
+   Running /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/stub_comps_mct/siac/cime_config/buildnml 
+  2025-06-02 16:19:40 esp 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/components/stub_comps_mct/sesp/cime_config/buildnml
+  2025-06-02 16:19:40 cpl 
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/drivers/mct/cime_config/buildnml
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/drv_in -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/seq_maps.rc -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/glc_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/iac_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/ocn_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/esp_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/ice_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/wav_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/lnd_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/atm_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/rof_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/Buildconf/cplconf/cpl_modelio.nml -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/wav_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/cpl_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/rof_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/glc_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/iac_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/ocn_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/lnd_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/esp_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/ice_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/atm_modelio.nml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/drof_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/marbl_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/drv_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/ice_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/pop_in -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.co2tseries.omip -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.presaero.clim_1850 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/drof.streams.txt.rof.iaf_jra -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.GCGCS.PREC -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.NCEP.SLP_ -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.NCEP.U_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.GISS.LWDN -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.NCEP.T_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.GISS.SWDN -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.NCEP.V_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/datm.streams.txt.CORE_IAF_JRA.NCEP.Q_10 -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/run/seq_maps.rc -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/CaseDocs
+Building gptl with output to file /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/gptl.bldlog.250602-161935
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/build_scripts/buildlib.gptl
+Building mct with output to file /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/mct.bldlog.250602-161935
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/build_scripts/buildlib.mct
+Building pio with output to file /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/pio.bldlog.250602-161935
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/build_scripts/buildlib.pio
+Component pio build complete with 5 warnings
+Building csm_share with output to file /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/csm_share.bldlog.250602-161935
+   Calling /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/build_scripts/buildlib.csm_share
 Component csm_share build complete with 15 warnings
          - Building atm Library 
-Building atm with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/atm.bldlog.241011-062055
+Building atm with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/atm.bldlog.250602-161935
          - Building lnd Library 
-Building lnd with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lnd.bldlog.241011-062055
+Building lnd with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lnd.bldlog.250602-161935
          - Building ice Library 
-Building ice with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ice.bldlog.241011-062055
+Building ice with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ice.bldlog.250602-161935
          - Building ocn Library 
-Building ocn with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ocn.bldlog.241011-062055
+Building ocn with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ocn.bldlog.250602-161935
          - Building rof Library 
-Building rof with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/rof.bldlog.241011-062055
+Building rof with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/rof.bldlog.250602-161935
          - Building glc Library 
-Building glc with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/glc.bldlog.241011-062055
+Building glc with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/glc.bldlog.250602-161935
          - Building wav Library 
-Building wav with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/wav.bldlog.241011-062055
+Building wav with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/wav.bldlog.250602-161935
          - Building iac Library 
-Building iac with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/iac.bldlog.241011-062055
+Building iac with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/iac.bldlog.250602-161935
          - Building esp Library 
-Building esp with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/esp.bldlog.241011-062055
-copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/glc/obj/glc_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
+Building esp with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/esp.bldlog.250602-161935
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/esp/obj/esp_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-sglc built in 1.695110 seconds
-sesp built in 1.695068 seconds
+sesp built in 0.714150 seconds
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lnd/obj/lnd_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/wav/obj/wav_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-swav built in 1.728215 seconds
-slnd built in 1.739861 seconds
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/iac/obj/iac_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-siac built in 1.767914 seconds
+slnd built in 0.741098 seconds
+swav built in 0.737324 seconds
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/glc/obj/glc_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
+siac built in 0.738600 seconds
+sglc built in 0.741638 seconds
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/rof/obj/rof_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/rof/obj/drof_comp_mod.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-drof built in 2.720724 seconds
+drof built in 1.191766 seconds
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/atm/obj/atm_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/atm/obj/datm_comp_mod.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-datm built in 3.855307 seconds
+datm built in 2.202070 seconds
 Component ice build complete with 1 warnings
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ice/obj/ice_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-cice built in 39.990656 seconds
+cice built in 31.544782 seconds
 Component ocn build complete with 26 warnings
 copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/ocn/obj/ocn_comp_mct.mod -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/lib/include
-pop built in 82.278745 seconds
-Building cesm from /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/drivers/mct/cime_config/buildexe with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.bldlog.241011-062055 
-copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.exe -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.exe.241011-062055
+pop built in 59.771969 seconds
+Building cesm from /global/cfs/cdirs/m4746/Projects/Ocean-CDR-Atlas-v0/codes/cesm2.2.0/cime/src/drivers/mct/cime_config/buildexe with output to /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.bldlog.250602-161935 
+copying /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.exe -&gt; /pscratch/sd/m/mattlong/Ocean-CDR-Atlas-v0/hr_4p2z.cdr-atlas-v0.control.001/bld/cesm.exe.250602-161935
 copying /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/env_build.xml -&gt; /global/cfs/projectdirs/m4746/Projects/Ocean-CDR-Atlas-v0/cases/hr_4p2z.cdr-atlas-v0.control.001/LockedFiles
-Time spent not building: 7.333835 sec
-Time spent building: 187.649500 sec
+Time spent not building: 5.065075 sec
+Time spent building: 130.853934 sec
 MODEL BUILD HAS FINISHED SUCCESSFULLY
 </pre></div>
 </div>
@@ -559,7 +677,7 @@ MODEL BUILD HAS FINISHED SUCCESSFULLY
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm</span><span class="o">.</span><span class="n">submit_cases</span><span class="p">([</span><span class="n">case</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atlas</span><span class="o">.</span><span class="n">submit_cases</span><span class="p">([</span><span class="n">case</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

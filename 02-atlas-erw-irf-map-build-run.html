@@ -57,12 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '02-atlas-global-irf-map-build-run';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02-atlas-erw-irf-map-build-run';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Global IRF Efficiency Map" href="03-atlas-global-irf-map-validate-analyze.html" />
-    <link rel="prev" title="Atlas Workflows" href="workflows.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -177,9 +177,9 @@
 <li class="toctree-l1"><a class="reference internal" href="01-stage-data.html">Stage inputdata for Ocean CDR Atlas calculations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Global Efficiency Maps</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="workflows.html">Atlas Workflows</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Global IRF Efficiency Map</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="workflows.html">Atlas Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02-atlas-global-irf-map-build-run.html">Global IRF Efficiency Map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03-atlas-global-irf-map-validate-analyze.html">Global IRF Efficiency Map</a></li>
 </ul>
 </details></li>
@@ -258,7 +258,7 @@
       
       
       
-      <li><a href="_sources/02-atlas-global-irf-map-build-run.ipynb" target="_blank"
+      <li><a href="_sources/02-atlas-erw-irf-map-build-run.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +393,7 @@ document.write(`
 <h2>Define experiment and phase<a class="headerlink" href="#define-experiment-and-phase" title="Link to this heading">#</a></h2>
 <div class="cell tag_parameters docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_forcing</span> <span class="o">=</span> <span class="s2">&quot;DOR&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_forcing</span> <span class="o">=</span> <span class="s2">&quot;ERW&quot;</span>
 <span class="n">vintage</span> <span class="o">=</span> <span class="s2">&quot;001&quot;</span>
 <span class="n">phase</span> <span class="o">=</span> <span class="s2">&quot;deploy&quot;</span>
 <span class="n">clobber</span> <span class="o">=</span> <span class="kc">False</span>
@@ -482,60 +482,60 @@ document.write(`
       <td>False</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-01-01_00000.001</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>North_Atlantic_basin</td>
       <td>1999-01</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_North_Atlantic_basin_000_1999-01-01_00000</td>
+      <td>glb-erw_North_Atlantic_basin_000_1999-01-01_00000</td>
       <td>0347-01-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-04-01_00001.001</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>North_Atlantic_basin</td>
       <td>1999-04</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_North_Atlantic_basin_000_1999-04-01_00001</td>
+      <td>glb-erw_North_Atlantic_basin_000_1999-04-01_00001</td>
       <td>0347-04-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-07-01_00002.001</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>North_Atlantic_basin</td>
       <td>1999-07</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_North_Atlantic_basin_000_1999-07-01_00002</td>
+      <td>glb-erw_North_Atlantic_basin_000_1999-07-01_00002</td>
       <td>0347-07-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-10-01_00003.001</th>
       <td>smyle</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>North_Atlantic_basin</td>
       <td>1999-10</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_North_Atlantic_basin_000_1999-10-01_00003</td>
+      <td>glb-erw_North_Atlantic_basin_000_1999-10-01_00003</td>
       <td>0347-10-01</td>
       <td>15</td>
       <td>10:00:00</td>
@@ -557,75 +557,75 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_118_1999-10-01_01235.001</th>
       <td>smyle</td>
-      <td>38.0</td>
-      <td>688.0</td>
-      <td>Southern_Ocean</td>
+      <td>118.0</td>
+      <td>468.0</td>
+      <td>South</td>
       <td>1999-10</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_Southern_Ocean_038_1999-10-01_02755</td>
+      <td>glb-erw_South_118_1999-10-01_01235</td>
       <td>0347-10-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-01-01_01236.001</th>
       <td>smyle</td>
-      <td>39.0</td>
-      <td>689.0</td>
-      <td>Southern_Ocean</td>
+      <td>119.0</td>
+      <td>469.0</td>
+      <td>South</td>
       <td>1999-01</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_Southern_Ocean_039_1999-01-01_02756</td>
+      <td>glb-erw_South_119_1999-01-01_01236</td>
       <td>0347-01-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-04-01_01237.001</th>
       <td>smyle</td>
-      <td>39.0</td>
-      <td>689.0</td>
-      <td>Southern_Ocean</td>
+      <td>119.0</td>
+      <td>469.0</td>
+      <td>South</td>
       <td>1999-04</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_Southern_Ocean_039_1999-04-01_02757</td>
+      <td>glb-erw_South_119_1999-04-01_01237</td>
       <td>0347-04-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-07-01_01238.001</th>
       <td>smyle</td>
-      <td>39.0</td>
-      <td>689.0</td>
-      <td>Southern_Ocean</td>
+      <td>119.0</td>
+      <td>469.0</td>
+      <td>South</td>
       <td>1999-07</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_Southern_Ocean_039_1999-07-01_02758</td>
+      <td>glb-erw_South_119_1999-07-01_01238</td>
       <td>0347-07-01</td>
       <td>15</td>
       <td>10:00:00</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-10-01_01239.001</th>
       <td>smyle</td>
-      <td>39.0</td>
-      <td>689.0</td>
-      <td>Southern_Ocean</td>
+      <td>119.0</td>
+      <td>469.0</td>
+      <td>South</td>
       <td>1999-10</td>
-      <td>DOR</td>
+      <td>ERW</td>
       <td>/global/cfs/projectdirs/m4746/Projects/OAE-Eff...</td>
-      <td>glb-dor_Southern_Ocean_039_1999-10-01_02759</td>
+      <td>glb-erw_South_119_1999-10-01_01239</td>
       <td>0347-10-01</td>
       <td>15</td>
       <td>10:00:00</td>
@@ -633,7 +633,7 @@ document.write(`
     </tr>
   </tbody>
 </table>
-<p>2761 rows × 12 columns</p>
+<p>1241 rows × 12 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -648,8 +648,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 1.51 s, total: 3.23 s
-Wall time: 4min 11s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 690 ms, sys: 383 ms, total: 1.07 s
+Wall time: 57.8 s
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -703,77 +703,77 @@ Wall time: 4min 11s
     <tr>
       <th>smyle.cdr-atlas-v0.control.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2024-11-04 23:44:49</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>45.61</td>
-      <td>471.47</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-01-01_00000.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-01-01_00000.001</th>
       <td>True</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
-      <td>False</td>
-      <td>0</td>
-      <td>2024-11-05 03:13:08</td>
+      <td>True</td>
+      <td>2</td>
+      <td>2025-06-20 20:21:26</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>58.82</td>
-      <td>365.62</td>
+      <td>57.0</td>
+      <td>377.26</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-04-01_00001.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-04-01_00001.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2024-11-05 03:12:00</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>59.00</td>
-      <td>364.49</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-07-01_00002.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-07-01_00002.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2024-11-04 20:27:38</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>58.89</td>
-      <td>365.17</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_North_Atlantic_basin_000_1999-10-01_00003.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_North_Atlantic_basin_000_1999-10-01_00003.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2024-11-04 21:37:34</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>58.94</td>
-      <td>364.83</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
@@ -791,83 +791,83 @@ Wall time: 4min 11s
       <td>...</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_038_1999-10-01_02755.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_118_1999-10-01_01235.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2025-03-13 04:44:19</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>55.20</td>
-      <td>389.56</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-01-01_02756.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-01-01_01236.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2025-03-13 04:40:44</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>55.71</td>
-      <td>385.98</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-04-01_02757.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-04-01_01237.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2025-03-13 04:39:37</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>55.95</td>
-      <td>384.32</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-07-01_02758.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-07-01_01238.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2025-03-13 04:33:59</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>56.92</td>
-      <td>377.78</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>smyle.cdr-atlas-v0.glb-dor_Southern_Ocean_039_1999-10-01_02759.001</th>
+      <th>smyle.cdr-atlas-v0.glb-erw_South_119_1999-10-01_01239.001</th>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
       <td>False</td>
       <td>0</td>
-      <td>2025-03-18 03:40:09</td>
+      <td>NaT</td>
       <td>None</td>
       <td>None</td>
       <td>False</td>
-      <td>56.86</td>
-      <td>378.18</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>2761 rows × 12 columns</p>
+<p>1241 rows × 12 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -904,6 +904,54 @@ Wall time: 4min 11s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Submitted batch job 39958961
+Submitted batch job 39958963
+Submitted batch job 39958965
+Submitted batch job 39958966
+Submitted batch job 39958967
+Submitted batch job 39958968
+Submitted batch job 39958969
+Submitted batch job 39958970
+Submitted batch job 39958972
+Submitted batch job 39958973
+Submitted batch job 39958974
+Submitted batch job 39958975
+Submitted batch job 39958976
+Submitted batch job 39958977
+Submitted batch job 39958978
+Submitted batch job 39958979
+Submitted batch job 39958980
+Submitted batch job 39958981
+Submitted batch job 39958982
+Submitted batch job 39958983
+Submitted batch job 39958984
+Submitted batch job 39958985
+Submitted batch job 39958986
+Submitted batch job 39958987
+Submitted batch job 39958988
+Submitted batch job 39958989
+Submitted batch job 39958990
+Submitted batch job 39958991
+Submitted batch job 39958992
+Submitted batch job 39958993
+Submitted batch job 39958994
+Submitted batch job 39958995
+Submitted batch job 39958996
+Submitted batch job 39958997
+Submitted batch job 39958998
+Submitted batch job 39958999
+Submitted batch job 39959000
+Submitted batch job 39959001
+Submitted batch job 39959002
+Submitted batch job 39959003
+Submitted batch job 39959004
+Submitted batch job 39959005
+Submitted batch job 39959006
+Submitted batch job 39959007
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="run-the-simulations">
@@ -911,6 +959,11 @@ Wall time: 4min 11s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">n_bundle</span><span class="o">=</span><span class="mi">140</span><span class="p">,</span> <span class="n">bundle_queue</span><span class="o">=</span><span class="s2">&quot;regular&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>waiting on 44 build(s)
 </pre></div>
 </div>
 </div>
@@ -948,24 +1001,6 @@ Wall time: 4min 11s
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="workflows.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Atlas Workflows</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="03-atlas-global-irf-map-validate-analyze.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Global IRF Efficiency Map</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
