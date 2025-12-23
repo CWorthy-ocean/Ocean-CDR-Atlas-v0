@@ -2,12 +2,13 @@
 
 set -e 
 
-# old way
-#module load e4s
-#spack env activate gcc
-#spack load nco
+# Set the main carbon system tracers (DIC, ALK) to the ALT_CO2 versions
+# DIC = DIC_ALT_CO2
+# ALK = ALK_ALT_CO2
+# MARBL_PH_3D = MARBL_PH_3D_ALT_CO2
+# MARBL_PH_SURF = MARBL_PH_SURF_ALT_CO2
 
-# new way
+# new way: Perlmutter
 module load climate-utils
 
 POP_R=${1}
