@@ -317,13 +317,13 @@ def create_smyle_clone(
 
 def create_hr_4p2z_clone(
     case,
-    refdate="0347-01-01",
+    refdate="1999-01-01",
     queue="regular",
     cdr_forcing=None,
     cdr_forcing_file=None,
     clobber=False,
     curtail_output=True,
-    stop_n=15,
+    stop_n=1,
     stop_option="nyear",
     wallclock="48:00:00",
     resubmit=0,
@@ -345,7 +345,16 @@ def create_hr_4p2z_clone(
     check_call(["rm", "-fr", f"{paths['scratch']}/{case}"])
 
     refcase = "g.e22.TL319_t13.G1850ECOIAF_JRA_HR.4p2z.001"
-    refcaserest_root = "/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest"
+
+    if machine_name == "perlmutter":
+        refcaserest_root = "/global/cfs/projectdirs/m4746/Datasets/HR_4p2z/rest"
+    
+    elif machine_name == "anvil":
+        refcaserest_root = "/anvil/projects/x-ees250129/Datasets/HR_4p2z/rest"
+    
+    else:
+        raise ValueError("unknown machine")
+        
     compset = "G1850ECOIAF_JRA_HR"
     res = "TL319_t13"
 
