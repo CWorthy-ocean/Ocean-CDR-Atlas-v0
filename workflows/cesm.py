@@ -1,6 +1,8 @@
 import os
 import shutil
 from glob import glob
+import shlex
+import subprocess
 from subprocess import check_call
 
 from datetime import datetime
@@ -13,12 +15,22 @@ import pandas as pd
 import machine
 from config import project_sname, paths, account, machine_name
 
+conda_env = "cesm2.2.0"
+
 scriptroot = paths["workflow"]
 os.makedirs(f"{scriptroot}/output/build-in", exist_ok=True)
 os.makedirs(f"{scriptroot}/output/build-out", exist_ok=True)
 
 
 cesm_inputdata = paths["cesm_inputdata_ro"]
+
+
+def conda_call(cmd, **kwargs):
+    """call command inside the CESM conda environment"""
+    if isinstance(cmd, str):
+        cmd = shlex.split(cmd)
+    full_cmd = ["conda", "run", "-n", conda_env, *cmd]
+    return subprocess.check_call(full_cmd, **kwargs)
 
 
 def create_smyle_clone(
@@ -358,11 +370,9 @@ def create_hr_4p2z_clone(
     compset = "G1850ECOIAF_JRA_HR"
     res = "TL319_t13"
 
-    check_call(
+    conda_call(
         " ".join(
             [
-                "module load python",
-                "&&",
                 "./create_newcase",
                 "--compset",
                 compset,
@@ -391,8 +401,9 @@ def create_hr_4p2z_clone(
 
     def xmlchange(arg, opt="", force=False):
         """call xmlchange"""
-        check_call(
-            f"module load python && ./xmlchange {opt} {arg}", cwd=caseroot, shell=True
+        conda_call(
+            ["./xmlchange", opt, arg],
+            cwd=caseroot,
         )
 
     xmlchange(f"RUNDIR={rundir}")
@@ -432,8 +443,7 @@ def create_hr_4p2z_clone(
     xmlchange(f"PROJECT={account}")
     xmlchange(f"JOB_QUEUE={queue}")
 
-    check_call(
-        "module load python && ./case.setup",
+    conda_call("./case.setup",
         cwd=caseroot,
         shell=True,
     )
