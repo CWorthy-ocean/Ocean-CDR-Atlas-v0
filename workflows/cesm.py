@@ -27,6 +27,12 @@ cesm_inputdata = paths["cesm_inputdata_ro"]
 
 def conda_call(cmd, **kwargs):
     """call command inside the CESM conda environment"""
+    shell = kwargs.pop("shell", False)
+    if shell:
+        cmd_str = cmd if isinstance(cmd, str) else shlex.join(cmd)
+        full_cmd = f"conda run -n {conda_env} {cmd_str}"
+        return subprocess.check_call(full_cmd, shell=True, **kwargs)
+
     if isinstance(cmd, str):
         cmd = shlex.split(cmd)
     full_cmd = ["conda", "run", "-n", conda_env, *cmd]
