@@ -520,8 +520,8 @@ def create_hr_4p2z_clone(
         shell=True,
     )
 
-    check_call(
-        "module load python && ./case.build --skip-provenance-check",
+    conda_call(
+        "./case.build --skip-provenance-check",
         cwd=caseroot,
         shell=True,
     )
