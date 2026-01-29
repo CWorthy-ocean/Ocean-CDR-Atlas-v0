@@ -370,9 +370,11 @@ def create_hr_4p2z_clone(
     compset = "G1850ECOIAF_JRA_HR"
     res = "TL319_t13"
 
-    conda_call(
+    check_call(
         " ".join(
             [
+                "module load python",
+                "&&",
                 "./create_newcase",
                 "--compset",
                 compset,
@@ -401,9 +403,8 @@ def create_hr_4p2z_clone(
 
     def xmlchange(arg, opt="", force=False):
         """call xmlchange"""
-        conda_call(
-            ["./xmlchange", opt, arg],
-            cwd=caseroot,
+        check_call(
+            f"module load python && ./xmlchange {opt} {arg}", cwd=caseroot, shell=True
         )
 
     xmlchange(f"RUNDIR={rundir}")
